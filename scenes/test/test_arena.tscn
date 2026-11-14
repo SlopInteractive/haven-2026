@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://mecpisjf1ohd" path="res://prefabs/player.tscn" id="1_x7yfq"]
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="2_xd32e"]
+[ext_resource type="Texture2D" uid="uid://ty7imnu84tmb" path="res://assets/sprites/background.tres" id="3_xd32e"]
 
 [node name="TestArena" type="Node2D" unique_id=670349092]
 
@@ -26,3 +27,6 @@ scale = Vector2(1.005224, 0.7)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2108395026]
 position = Vector2(1009, 353)
 zoom = Vector2(0.48, 0.48)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=933641310]
+texture = ExtResource("3_xd32e")
