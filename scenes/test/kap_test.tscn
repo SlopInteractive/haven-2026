@@ -11,21 +11,19 @@ size = Vector2(113, 81)
 scale = Vector2(0.96877086, 1.0575527)
 
 [node name="Platform" parent="." unique_id=489886513 instance=ExtResource("1_ofchl")]
-position = Vector2(957.91473, 188.17026)
+position = Vector2(882.5617, 178.71451)
 rotation = 0.2984513
 scale = Vector2(0.69153726, 0.8450366)
 
 [node name="Platform2" parent="." unique_id=931321867 instance=ExtResource("1_ofchl")]
-position = Vector2(449.02255, 399.0345)
+position = Vector2(350.96017, 362.1569)
 scale = Vector2(0.69153726, 0.8450366)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=695376995]
 position = Vector2(452.1193, 91.7212)
 lock_rotation = true
 script = ExtResource("2_wa75g")
-move_speed = 600.0
-bounce_strength = 800.0
-bounce_delay = 0.05
+bounce_delay = 0.01
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=964709701]

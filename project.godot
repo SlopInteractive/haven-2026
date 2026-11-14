@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="haven"
-run/main_scene="uid://due2n4hr7i02"
+run/main_scene="uid://cnvao3antjlyi"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
