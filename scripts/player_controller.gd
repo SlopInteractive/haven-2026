@@ -23,6 +23,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_action_strength("player" + str(player_id) + "_right") - Input.get_action_strength("player" + str(player_id) + "_left")
 
+	if Input.is_action_just_pressed("player1_interact"):
+		player_visual.start_holding()
+
 	if direction != 0:
 		player_visual.trigger_midair_walk_animation()
 		player_visual.update_facing(direction)
