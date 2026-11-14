@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://brpvolci1fnnq"]
 
-[ext_resource type="Texture2D" uid="uid://cfpqhxxeerpxd" path="res://assets/sprites/Platform.png" id="1_xo78u"]
+[ext_resource type="Texture2D" uid="uid://cfpqhxxeerpxd" path="res://assets/sprites/platforms/platform_01.png" id="1_xo78u"]
 [ext_resource type="Script" uid="uid://wihlej1loy6t" path="res://scripts/platform.gd" id="2_deode"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x7yfq"]
+friction = 0.0
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_xo78u"]
 resource_local_to_scene = true
@@ -314,9 +317,11 @@ anchor_radius = 30.0
 anchor_zone = NodePath("../Anchor")
 vertex_interval = 100
 softness = 100.0
+radius = 95
 margin_offset_edge = 20.0
 can_sleep = false
 gravity_scale = 0.0
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 metadata/_custom_type_script = "uid://kol6k5y6rb8a"
 
 [node name="Skeleton2D" type="Skeleton2D" parent="SoftBody2D" unique_id=1270625869]
@@ -326,7 +331,7 @@ modification_stack = SubResource("SkeletonModificationStack2D_or1cc")
 [node name="Bone-0" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1056455717]
 position = Vector2(106.08487, 29.520844)
 rotation = 0.27783093
-scale = Vector2(1, 1.0000004)
+scale = Vector2(1, 1.0000006)
 rest = Transform2D(0.96165264, 0.27427042, -0.27427042, 0.96165264, 106.084885, 29.520847)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -339,8 +344,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-1" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=887098329]
 position = Vector2(48.646667, 52.96392)
-rotation = 0.69203526
-scale = Vector2(1.0000004, 1.0000004)
+rotation = 0.6920355
+scale = Vector2(1.0000006, 1.0000006)
 rest = Transform2D(0.7699491, 0.6381054, -0.6381054, 0.7699491, 48.646675, 52.963917)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -421,7 +426,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-7" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1050212417]
 position = Vector2(279.7363, 101.6875)
 rotation = 2.6492474
-scale = Vector2(1.0000001, 1)
+scale = Vector2(1.0000002, 1)
 rest = Transform2D(-0.88122684, 0.47269368, -0.47269368, -0.88122684, 279.7363, 101.68749)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -473,8 +478,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-11" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1668017027]
 position = Vector2(444.0646, 41.66896)
-rotation = 0.3757446
-scale = Vector2(1.0000001, 1)
+rotation = 0.37574473
+scale = Vector2(1.0000001, 0.99999994)
 rest = Transform2D(0.9302347, 0.36696512, -0.36696512, 0.9302347, 444.0646, 41.668972)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -500,8 +505,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-13" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=769280467]
 position = Vector2(452.0748, 106.0527)
-rotation = 2.7063441
-scale = Vector2(1.0000001, 1.0000004)
+rotation = 2.706344
+scale = Vector2(1.0000001, 1.0000006)
 rest = Transform2D(-0.9067654, 0.42163554, -0.42163554, -0.9067654, 452.0748, 106.05269)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -554,7 +559,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1588018986]
 position = Vector2(591.06854, 38.057587)
 rotation = 0.22119896
-scale = Vector2(1, 1.0000004)
+scale = Vector2(1, 1.0000006)
 rest = Transform2D(0.9756351, 0.2193995, -0.2193995, 0.9756351, 591.06854, 38.057583)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -581,7 +586,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-19" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=198264474]
 position = Vector2(586.5391, 103.57087)
 rotation = 2.7720475
-scale = Vector2(1, 1.0000004)
+scale = Vector2(1, 1.0000006)
 rest = Transform2D(-0.9324917, 0.3611913, -0.3611913, -0.9324917, 586.5391, 103.57086)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -608,7 +613,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-21" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1270916322]
 position = Vector2(589.68286, 183.74847)
 rotation = -2.6011665
-scale = Vector2(1, 1.0000004)
+scale = Vector2(1, 1.0000006)
 rest = Transform2D(-0.85748947, -0.51450145, 0.51450145, -0.85748947, 589.68286, 183.74847)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -661,7 +666,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-25" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1870169787]
 position = Vector2(759.4725, 101.40782)
 rotation = 2.6562784
-scale = Vector2(1.0000001, 1.0000004)
+scale = Vector2(1.0000002, 1.0000006)
 rest = Transform2D(-0.8845285, 0.46648616, -0.46648616, -0.8845285, 759.4725, 101.40782)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -675,7 +680,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-26" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1878675371]
 position = Vector2(673.04865, 146.98634)
 rotation = 1.540454
-scale = Vector2(1.0000001, 1.0000001)
+scale = Vector2(1.0000002, 1.0000001)
 rest = Transform2D(0.030337641, 0.99953973, -0.99953973, 0.030337641, 673.04865, 146.98634)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -688,8 +693,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-27" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1059713515]
 position = Vector2(760.0884, 189.88368)
-rotation = -2.6836832
-scale = Vector2(1.0000001, 1.0000004)
+rotation = -2.683683
+scale = Vector2(1.0000001, 1.0000006)
 rest = Transform2D(-0.89697874, -0.44207373, 0.44207373, -0.89697874, 760.0884, 189.88367)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -703,7 +708,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-28" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=191309025]
 position = Vector2(674.98975, 210.9407)
 rotation = -1.6011386
-scale = Vector2(1.0000001, 1.0000001)
+scale = Vector2(1.0000002, 1.0000001)
 rest = Transform2D(-0.03033761, -0.99953973, 0.99953973, -0.03033761, 674.98975, 210.94069)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -769,8 +774,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-33" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1013326366]
 position = Vector2(923.65985, 182.98848)
-rotation = -2.721974
-scale = Vector2(1.0000001, 1.0000004)
+rotation = -2.7219737
+scale = Vector2(1.0000002, 1.0000006)
 rest = Transform2D(-0.9132444, -0.4074121, 0.4074121, -0.9132444, 923.65985, 182.98848)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -797,6 +802,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-0" type="RigidBody2D" parent="SoftBody2D" unique_id=670954746]
 position = Vector2(106.084885, 29.520847)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 0
@@ -839,6 +845,7 @@ softness = 100.0
 [node name="Bone-1" type="RigidBody2D" parent="SoftBody2D" unique_id=48522966]
 position = Vector2(48.646675, 52.963917)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 1
@@ -881,6 +888,7 @@ softness = 100.0
 [node name="Bone-2" type="RigidBody2D" parent="SoftBody2D" unique_id=1233465745]
 position = Vector2(106.57872, 100.97588)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 2
@@ -947,6 +955,7 @@ softness = 100.0
 [node name="Bone-3" type="RigidBody2D" parent="SoftBody2D" unique_id=75043383]
 position = Vector2(48.826397, 148.7182)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 3
@@ -989,8 +998,10 @@ softness = 100.0
 [node name="Bone-4" type="RigidBody2D" parent="SoftBody2D" unique_id=2137315931]
 position = Vector2(91.862816, 191.515)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
+freeze = true
 metadata/idx = 4
 metadata/bone_name = &"Bone-4"
 
@@ -1039,6 +1050,7 @@ softness = 100.0
 [node name="Bone-5" type="RigidBody2D" parent="SoftBody2D" unique_id=149616276]
 position = Vector2(278.36295, 32.463223)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 5
@@ -1081,6 +1093,7 @@ softness = 100.0
 [node name="Bone-6" type="RigidBody2D" parent="SoftBody2D" unique_id=1042737828]
 position = Vector2(192.75078, 54.2386)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 6
@@ -1139,6 +1152,7 @@ softness = 100.0
 [node name="Bone-7" type="RigidBody2D" parent="SoftBody2D" unique_id=1649227773]
 position = Vector2(279.7363, 101.68749)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 7
@@ -1205,6 +1219,7 @@ softness = 100.0
 [node name="Bone-8" type="RigidBody2D" parent="SoftBody2D" unique_id=820252474]
 position = Vector2(193.11926, 148.14922)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 8
@@ -1271,6 +1286,7 @@ softness = 100.0
 [node name="Bone-9" type="RigidBody2D" parent="SoftBody2D" unique_id=284741259]
 position = Vector2(278.8697, 188.94708)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 9
@@ -1329,8 +1345,10 @@ softness = 100.0
 [node name="Bone-10" type="RigidBody2D" parent="SoftBody2D" unique_id=1136785163]
 position = Vector2(192.30934, 214.0816)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
+freeze = true
 metadata/idx = 10
 metadata/bone_name = &"Bone-10"
 
@@ -1371,6 +1389,7 @@ softness = 100.0
 [node name="Bone-11" type="RigidBody2D" parent="SoftBody2D" unique_id=1452121356]
 position = Vector2(444.0646, 41.668972)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 11
@@ -1413,6 +1432,7 @@ softness = 100.0
 [node name="Bone-12" type="RigidBody2D" parent="SoftBody2D" unique_id=396412848]
 position = Vector2(364.52493, 58.476738)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 12
@@ -1471,6 +1491,7 @@ softness = 100.0
 [node name="Bone-13" type="RigidBody2D" parent="SoftBody2D" unique_id=1645774925]
 position = Vector2(452.0748, 106.05269)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 13
@@ -1537,6 +1558,7 @@ softness = 100.0
 [node name="Bone-14" type="RigidBody2D" parent="SoftBody2D" unique_id=1855855339]
 position = Vector2(366.0197, 146.06734)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 14
@@ -1603,6 +1625,7 @@ softness = 100.0
 [node name="Bone-15" type="RigidBody2D" parent="SoftBody2D" unique_id=1345650187]
 position = Vector2(445.875, 179.68463)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 15
@@ -1661,8 +1684,10 @@ softness = 100.0
 [node name="Bone-16" type="RigidBody2D" parent="SoftBody2D" unique_id=1771645425]
 position = Vector2(363.0371, 208.88496)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
+freeze = true
 metadata/idx = 16
 metadata/bone_name = &"Bone-16"
 
@@ -1703,6 +1728,7 @@ softness = 100.0
 [node name="Bone-17" type="RigidBody2D" parent="SoftBody2D" unique_id=227256832]
 position = Vector2(591.06854, 38.057583)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 17
@@ -1745,6 +1771,7 @@ softness = 100.0
 [node name="Bone-18" type="RigidBody2D" parent="SoftBody2D" unique_id=1342516154]
 position = Vector2(513.22205, 68.950645)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 18
@@ -1803,6 +1830,7 @@ softness = 100.0
 [node name="Bone-19" type="RigidBody2D" parent="SoftBody2D" unique_id=1884218410]
 position = Vector2(586.5391, 103.57086)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 19
@@ -1869,6 +1897,7 @@ softness = 100.0
 [node name="Bone-20" type="RigidBody2D" parent="SoftBody2D" unique_id=130927295]
 position = Vector2(507.24463, 134.28479)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 20
@@ -1935,6 +1964,7 @@ softness = 100.0
 [node name="Bone-21" type="RigidBody2D" parent="SoftBody2D" unique_id=937669240]
 position = Vector2(589.68286, 183.74847)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 21
@@ -1993,8 +2023,10 @@ softness = 100.0
 [node name="Bone-22" type="RigidBody2D" parent="SoftBody2D" unique_id=294313022]
 position = Vector2(515.0186, 200.53539)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
+freeze = true
 metadata/idx = 22
 metadata/bone_name = &"Bone-22"
 
@@ -2035,6 +2067,7 @@ softness = 100.0
 [node name="Bone-23" type="RigidBody2D" parent="SoftBody2D" unique_id=1292141104]
 position = Vector2(760.4598, 31.356203)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 23
@@ -2077,6 +2110,7 @@ softness = 100.0
 [node name="Bone-24" type="RigidBody2D" parent="SoftBody2D" unique_id=1988267070]
 position = Vector2(673.9766, 56.701847)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 24
@@ -2135,6 +2169,7 @@ softness = 100.0
 [node name="Bone-25" type="RigidBody2D" parent="SoftBody2D" unique_id=292459046]
 position = Vector2(759.4725, 101.40782)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 25
@@ -2201,6 +2236,7 @@ softness = 100.0
 [node name="Bone-26" type="RigidBody2D" parent="SoftBody2D" unique_id=848521783]
 position = Vector2(673.04865, 146.98634)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 26
@@ -2267,6 +2303,7 @@ softness = 100.0
 [node name="Bone-27" type="RigidBody2D" parent="SoftBody2D" unique_id=890088190]
 position = Vector2(760.0884, 189.88367)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 27
@@ -2325,8 +2362,10 @@ softness = 100.0
 [node name="Bone-28" type="RigidBody2D" parent="SoftBody2D" unique_id=1024462912]
 position = Vector2(674.98975, 210.94069)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
+freeze = true
 metadata/idx = 28
 metadata/bone_name = &"Bone-28"
 
@@ -2367,6 +2406,7 @@ softness = 100.0
 [node name="Bone-29" type="RigidBody2D" parent="SoftBody2D" unique_id=181391963]
 position = Vector2(923.8051, 37.868046)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 29
@@ -2401,6 +2441,7 @@ softness = 100.0
 [node name="Bone-30" type="RigidBody2D" parent="SoftBody2D" unique_id=202282672]
 position = Vector2(846.374, 53.717587)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 30
@@ -2459,6 +2500,7 @@ softness = 100.0
 [node name="Bone-31" type="RigidBody2D" parent="SoftBody2D" unique_id=1262643223]
 position = Vector2(923.4664, 100.89307)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 31
@@ -2509,6 +2551,7 @@ softness = 100.0
 [node name="Bone-32" type="RigidBody2D" parent="SoftBody2D" unique_id=1186256718]
 position = Vector2(846.0909, 148.38379)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 32
@@ -2575,6 +2618,7 @@ softness = 100.0
 [node name="Bone-33" type="RigidBody2D" parent="SoftBody2D" unique_id=1426722600]
 position = Vector2(923.65985, 182.98848)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
 metadata/idx = 33
@@ -2617,8 +2661,10 @@ softness = 100.0
 [node name="Bone-34" type="RigidBody2D" parent="SoftBody2D" unique_id=1646249681]
 position = Vector2(846.7181, 214.78215)
 mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x7yfq")
 gravity_scale = 0.0
 can_sleep = false
+freeze = true
 metadata/idx = 34
 metadata/bone_name = &"Bone-34"
 
