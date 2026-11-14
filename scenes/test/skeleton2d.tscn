@@ -3,12 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://bkon5tx35ldt5" path="res://assets/sprites/gBot_pieces.png" id="1_nbu5v"]
 
 [node name="Character" type="Node2D" unique_id=1099431863]
+position = Vector2(235, 271)
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
 
 [node name="polygons" type="Node2D" parent="." unique_id=829078649]
 position = Vector2(-53, 180)
+metadata/_edit_group_ = true
 
 [node name="arm_left" type="Polygon2D" parent="polygons" unique_id=325122631]
-visible = false
 position = Vector2(154, 10)
 texture = ExtResource("1_nbu5v")
 skeleton = NodePath("../../Skeleton2D")
@@ -16,8 +19,7 @@ polygon = PackedVector2Array(61.21396, 358.734, 39.21396, 319.134, 22.493958, 26
 uv = PackedVector2Array(214.79845, 351.77863, 197.31535, 310.25632, 183.11035, 264.90955, 184.71011, 206.10423, 186.4701, 177.94423, 188.39767, 143.01549, 187.0755, 111.283676, 186.47006, 56.504242, 192.36601, 35.260296, 206.24867, 41.87109, 208.89299, 53.109432, 226.74211, 26.666267, 235.99724, 24.68303, 247.45407, 43.920242, 266.40686, 41.21001, 273.01764, 57.736988, 267.729, 82.858, 245.39383, 194.43088, 267.79404, 257.80707, 284.23804, 320.76825, 278.8324, 339.91455, 269.80084, 341.14612, 253.0427, 348.50055, 245.94019, 359.4275, 229.54979, 359.4275)
 bones = ["hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_left/calf_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_left/calf_left/foot_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_right/calf_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_right/calf_right/foot_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/head/jaw", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/arm_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/arm_left/hand_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/arm_right", PackedFloat32Array(0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0), "hip/chest/arm_right/hand_right", PackedFloat32Array(0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5)]
 
-[node name="leg_left" type="Polygon2D" parent="polygons" unique_id=1477584659]
-visible = false
+[node name="leg_right" type="Polygon2D" parent="polygons" unique_id=1477584659]
 position = Vector2(28, -172)
 texture = ExtResource("1_nbu5v")
 skeleton = NodePath("../../Skeleton2D")
@@ -49,8 +51,7 @@ polygon = PackedVector2Array(481.90015, 582.1233, 509.17694, 655.1547, 553.17175
 uv = PackedVector2Array(481.90015, 582.1233, 509.17694, 655.1547, 553.17175, 682.4315, 720.3521, 685.07117, 796.9031, 655.1547, 824.1799, 569.80475, 740.5897, 573.32434, 746.74896, 591.8021, 722.99176, 591.8021, 717.7124, 568.92487, 649.9604, 570.68463, 631.48254, 587.40265, 603.32587, 575.0841, 549.65216, 578.6037, 546.13257, 595.3218, 527.6547, 570.68463)
 bones = ["hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_left/calf_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_left/calf_left/foot_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_right/calf_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/leg_right/calf_right/foot_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/head/jaw", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "hip/chest/arm_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/arm_left/hand_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/arm_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/chest/arm_right/hand_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="leg_right" type="Polygon2D" parent="polygons" unique_id=438220542]
-visible = false
+[node name="leg_left" type="Polygon2D" parent="polygons" unique_id=438220542]
 position = Vector2(-71, -175)
 texture = ExtResource("1_nbu5v")
 skeleton = NodePath("../../Skeleton2D")
@@ -67,6 +68,7 @@ bones = ["hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
 [node name="Skeleton2D" type="Skeleton2D" parent="." unique_id=162860435]
 position = Vector2(-15, 135)
+metadata/_edit_group_ = true
 
 [node name="hip_physical" type="PhysicalBone2D" parent="Skeleton2D" unique_id=1235172269]
 position = Vector2(122, 275)
@@ -74,66 +76,190 @@ bone2d_nodepath = NodePath("../hip")
 bone2d_index = 0
 simulate_physics = true
 follow_bone_when_simulating = true
+metadata/_edit_group_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical" unique_id=1162201126]
+[node name="hip_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical" unique_id=1162201126]
 position = Vector2(-1, 16)
 polygon = PackedVector2Array(-64, -39, -46, -49, 42, -42, 61, -31, 65, -13, 55, 16, 33, 35, -34, 32, -65, 11, -72, -21)
 
-[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical" unique_id=790866726]
-position = Vector2(190, 37)
-node_a = NodePath("..")
-node_b = NodePath("chest_physical")
-
-[node name="chest_physical" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D" unique_id=1681828837]
-position = Vector2(-190, -37)
-bone2d_nodepath = NodePath("../../../hip")
-bone2d_index = 0
+[node name="chest" type="PhysicalBone2D" parent="Skeleton2D/hip_physical" unique_id=1681828837]
+position = Vector2(8, -69)
+bone2d_nodepath = NodePath("../../hip/chest")
+bone2d_index = 7
 simulate_physics = true
 follow_bone_when_simulating = true
+metadata/_edit_group_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical" unique_id=436681534]
-position = Vector2(10, -105)
+[node name="chest_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/chest" unique_id=790866726]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="chest_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/chest" unique_id=436681534]
+position = Vector2(6, -25)
 polygon = PackedVector2Array(-75, -88, -43, -101, -43, -138, -11, -161, 22, -158, 39, -144, 46, -113, 43, -101, 71, -48, 83, -9, 56, 43, 38, 57, 33, 75, -62, 68, -63, 54, -81, 20, -86, -45)
 
-[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical" unique_id=1438409029]
-node_a = NodePath("..")
-node_b = NodePath("head_physical")
+[node name="arm_right" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/chest" unique_id=452344109]
+bone2d_nodepath = NodePath("../../../hip/chest/arm_right")
+bone2d_index = 1
+metadata/_edit_group_ = true
 
-[node name="head_physical" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical/DampedSpringJoint2D" unique_id=201294598]
-position = Vector2(-46, -238)
-bone2d_nodepath = NodePath("../../../../../hip/chest/head")
-bone2d_index = 2
+[node name="arm_right_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/chest/arm_right" unique_id=2136767634]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="arm_right_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/chest/arm_right" unique_id=655352697]
+position = Vector2(-94.8, -71.6)
+polygon = PackedVector2Array(-25, -19, -24, -51, -11, -54, 1, -39, 15, -65, 25, -62, 25, -37, 55, -45, 62, -37, 57, -16, 46, 32, 32, 81, 23, 93, -29, 89, -29, 30, -21, 19)
+
+[node name="hand_right" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/chest/arm_right" unique_id=1971873756]
+bone2d_nodepath = NodePath("../../../../hip/chest/arm_right/hand_right")
+bone2d_index = 3
+metadata/_edit_group_ = true
+
+[node name="hand_right_join" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/chest/arm_right/hand_right" unique_id=1459643570]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="hand_right_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/chest/arm_right/hand_right" unique_id=896058244]
+position = Vector2(-95.8, 37.4)
+polygon = PackedVector2Array(-25, -23, 31, -27, 27, -8, 50, 64, 58, 85, 67, 104, 57, 135, 37, 152, 2, 153, -18, 124, -37, 62, -27, -9)
+
+[node name="head" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/chest" unique_id=201294598]
+position = Vector2(0, -130)
+bone2d_nodepath = NodePath("../../../hip/chest/head")
+bone2d_index = 8
 simulate_physics = true
 follow_bone_when_simulating = true
+metadata/_edit_group_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical/DampedSpringJoint2D/head_physical" unique_id=505700460]
-position = Vector2(95, -108)
+[node name="head_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/chest/head" unique_id=1438409029]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="head_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/chest/head" unique_id=505700460]
+position = Vector2(39, -150)
 polygon = PackedVector2Array(-145, 34, 161, 28, 163, -59, 153, -85, 168, -109, 143, -142, 119, -146, 112, -173, 74, -187, 22, -187, 14, -172, -1, -192, -33, -192, -85, -162, -74, -129, -96, -118, -127, -117, -154, -76, -157, 3)
 
-[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical/DampedSpringJoint2D/head_physical" unique_id=2079698564]
-node_a = NodePath("..")
-node_b = NodePath("jaw_physical")
-
-[node name="jaw_physical" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical/DampedSpringJoint2D/head_physical/DampedSpringJoint2D" unique_id=896405675]
-bone2d_nodepath = NodePath("../../../../../../../hip/chest/head/jaw")
-bone2d_index = 1
+[node name="jaw" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/chest/head" unique_id=896405675]
+position = Vector2(-63, -65)
+bone2d_nodepath = NodePath("../../../../hip/chest/head/jaw")
+bone2d_index = 9
 simulate_physics = true
 follow_bone_when_simulating = true
+metadata/_edit_group_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical/DampedSpringJoint2D/head_physical/DampedSpringJoint2D/jaw_physical" unique_id=1003456113]
+[node name="jaw_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/chest/head/jaw" unique_id=2079698564]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="jaw_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/chest/head/jaw" unique_id=1003456113]
+position = Vector2(7, 20)
 polygon = PackedVector2Array(-49, -59, -41, -17, -19, 12, 26, 31, 150, 24, 230, 18, 259, -23, 275, -79, 207, -71, -50, -67)
 
-[node name="DampedSpringJoint2D2" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical" unique_id=2136767634]
-node_a = NodePath("..")
-node_b = NodePath("arm_left_physical")
+[node name="arm_left" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/chest" unique_id=1447509969]
+bone2d_nodepath = NodePath("../../../hip/chest/arm_left")
+bone2d_index = 10
+metadata/_edit_group_ = true
 
-[node name="arm_left_physical" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical/DampedSpringJoint2D2" unique_id=452344109]
-bone2d_nodepath = NodePath("../../../../../hip/chest/arm_left")
+[node name="arm_left_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/chest/arm_left" unique_id=1081415444]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="arm_left_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/chest/arm_left" unique_id=327272206]
+position = Vector2(65.3, -53.1)
+polygon = PackedVector2Array(-18, -36, -25, -62, -8, -62, 7, -40, 25, -63, 48, -57, 38, -29, 48, 79, -8, 90, -40, -4, -53, -45, -39, -51, -20, -27)
+
+[node name="hand_left" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/chest/arm_left" unique_id=715883871]
+bone2d_nodepath = NodePath("../../../../hip/chest/arm_left/hand_left")
+bone2d_index = 11
+metadata/_edit_group_ = true
+
+[node name="hand_left_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/chest/arm_left/hand_left" unique_id=690336565]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="hand_left_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/chest/arm_left/hand_left" unique_id=278528012]
+position = Vector2(87.3, 34.9)
+polygon = PackedVector2Array(-34, 6, 25, -10, 58, 54, 93, 115, 81, 141, 56, 142, 34, 160, -8, 126, -20, 92, -21, 67)
+
+[node name="leg_left" type="PhysicalBone2D" parent="Skeleton2D/hip_physical" unique_id=641294664]
+bone2d_nodepath = NodePath("../../hip/leg_left")
 bone2d_index = 1
+metadata/_edit_group_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/DampedSpringJoint2D/chest_physical/DampedSpringJoint2D2/arm_left_physical" unique_id=655352697]
-position = Vector2(-84, -140)
-polygon = PackedVector2Array(-25, -19, -24, -51, -11, -54, 1, -39, 15, -65, 25, -62, 25, -37, 55, -45, 62, -37, 57, -16, 46, 32, 32, 81, 23, 93, -29, 89, -29, 30, -21, 19)
+[node name="leg_left_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/leg_left" unique_id=633458691]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="leg_left_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/leg_left" unique_id=570426340]
+position = Vector2(71, 37)
+polygon = PackedVector2Array(-9, -46, 27, -51, 25, 30, 16, 48, -26, 78, -30, 14, -14, 4)
+
+[node name="calf_left" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/leg_left" unique_id=645912720]
+bone2d_nodepath = NodePath("../../../hip/leg_left/calf_left")
+bone2d_index = 2
+metadata/_edit_group_ = true
+
+[node name="calf_left_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/leg_left/calf_left" unique_id=677735662]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="calf_left_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/leg_left/calf_left" unique_id=1115428373]
+position = Vector2(63, 145)
+polygon = PackedVector2Array(-16, -28, 36, -69, 42, -59, 34, -16, 46, 59, -27, 58, -22, -32)
+
+[node name="foot_left" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/leg_left/calf_left" unique_id=748613516]
+bone2d_nodepath = NodePath("../../../../hip/leg_left/calf_left/foot_left")
+bone2d_index = 3
+metadata/_edit_group_ = true
+
+[node name="foot_left_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/leg_left/calf_left/foot_left" unique_id=649111201]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="foot_left_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/leg_left/calf_left/foot_left" unique_id=1852032278]
+position = Vector2(50, 230)
+polygon = PackedVector2Array(-17, -30, 61, -25, 91, -24, 106, 12, 121, 30, 118, 52, -30, 46, -32, 25, -21, 21)
+
+[node name="leg_right" type="PhysicalBone2D" parent="Skeleton2D/hip_physical" unique_id=2094724550]
+position = Vector2(-126, -10)
+bone2d_nodepath = NodePath("../../hip/leg_right")
+bone2d_index = 4
+metadata/_edit_group_ = true
+
+[node name="leg_right_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/leg_right" unique_id=1536460315]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="leg_right_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/leg_right" unique_id=1967054045]
+position = Vector2(71, 37)
+polygon = PackedVector2Array(-9, -46, 27, -51, 25, 30, 16, 48, -26, 78, -30, 14, -14, 4)
+
+[node name="calf_right" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/leg_right" unique_id=1227233111]
+bone2d_nodepath = NodePath("../../../hip/leg_right/calf_right")
+bone2d_index = 5
+metadata/_edit_group_ = true
+
+[node name="calf_right_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/leg_right/calf_right" unique_id=1923552217]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="calf_right_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/leg_right/calf_right" unique_id=1351888030]
+position = Vector2(63, 145)
+polygon = PackedVector2Array(-16, -28, 36, -69, 42, -59, 34, -16, 46, 59, -27, 58, -22, -32)
+
+[node name="foot_right" type="PhysicalBone2D" parent="Skeleton2D/hip_physical/leg_right/calf_right" unique_id=1709394990]
+bone2d_nodepath = NodePath("../../../../hip/leg_right/calf_right/foot_right")
+bone2d_index = 6
+metadata/_edit_group_ = true
+
+[node name="foot_right_joint" type="DampedSpringJoint2D" parent="Skeleton2D/hip_physical/leg_right/calf_right/foot_right" unique_id=373868756]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="foot_right_polygon" type="CollisionPolygon2D" parent="Skeleton2D/hip_physical/leg_right/calf_right/foot_right" unique_id=1153223945]
+position = Vector2(50, 230)
+polygon = PackedVector2Array(-17, -30, 61, -25, 91, -24, 106, 12, 121, 30, 118, 52, -30, 46, -32, 25, -21, 21)
 
 [node name="hip" type="Bone2D" parent="Skeleton2D" unique_id=211976513]
 position = Vector2(122, 275)
