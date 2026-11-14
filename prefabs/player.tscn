@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mecpisjf1ohd"]
+
+[ext_resource type="Script" uid="uid://basudrj7khkap" path="res://scripts/player_controller.gd" id="1_60koi"]
+[ext_resource type="Texture2D" uid="uid://uelvhslkv8pv" path="res://icon.svg" id="2_n0lew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88qri"]
+size = Vector2(56.181656, 77.75974)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=826111072]
+lock_rotation = true
+script = ExtResource("1_60koi")
+bounce_delay = 0.01
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255464532]
+texture = ExtResource("2_n0lew")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735688710]
+position = Vector2(0, 12.063393)
+scale = Vector2(-1.645221, 1.0207363)
+shape = SubResource("RectangleShape2D_88qri")

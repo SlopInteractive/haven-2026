@@ -1,14 +1,10 @@
 [gd_scene format=3 uid="uid://cnvao3antjlyi"]
 
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="1_ofchl"]
-[ext_resource type="Texture2D" uid="uid://uelvhslkv8pv" path="res://icon.svg" id="2_88qri"]
-[ext_resource type="Script" uid="uid://basudrj7khkap" path="res://scripts/player_controller.gd" id="2_wa75g"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_88qri"]
-size = Vector2(56.181656, 77.75974)
+[ext_resource type="PackedScene" uid="uid://mecpisjf1ohd" path="res://prefabs/player.tscn" id="2_ofchl"]
 
 [node name="KapTest" type="Node2D" unique_id=884624408]
-scale = Vector2(0.96877086, 1.0575527)
+scale = Vector2(0.9570627, 1.0654504)
 
 [node name="Platform" parent="." unique_id=489886513 instance=ExtResource("1_ofchl")]
 position = Vector2(882.5617, 178.71451)
@@ -19,17 +15,5 @@ scale = Vector2(0.7100382, 0.8472459)
 position = Vector2(350.96017, 362.1569)
 scale = Vector2(0.69153726, 0.8450366)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=695376995]
+[node name="RigidBody2D" parent="." unique_id=826111072 instance=ExtResource("2_ofchl")]
 position = Vector2(294.18723, 78.483086)
-lock_rotation = true
-script = ExtResource("2_wa75g")
-bounce_delay = 0.01
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=964709701]
-texture = ExtResource("2_88qri")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=919512229]
-position = Vector2(0, 12.063393)
-scale = Vector2(-1.645221, 1.0207363)
-shape = SubResource("RectangleShape2D_88qri")
