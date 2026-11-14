@@ -9,10 +9,10 @@ size = Vector2(113, 112)
 [node name="KapTest" type="Node2D" unique_id=884624408]
 
 [node name="Platform" parent="." unique_id=489886513 instance=ExtResource("1_ofchl")]
-position = Vector2(240, 265)
+position = Vector2(448, 373)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=734849386]
-position = Vector2(449, 41)
+position = Vector2(403, 40)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1052021700]
