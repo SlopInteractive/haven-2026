@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cnvao3antjlyi"]
+
+[ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="1_ofchl"]
+[ext_resource type="Texture2D" uid="uid://uelvhslkv8pv" path="res://icon.svg" id="2_88qri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my6qp"]
+size = Vector2(113, 112)
+
+[node name="KapTest" type="Node2D" unique_id=884624408]
+
+[node name="Platform" parent="." unique_id=489886513 instance=ExtResource("1_ofchl")]
+position = Vector2(240, 265)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=734849386]
+position = Vector2(449, 41)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1052021700]
+texture = ExtResource("2_88qri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1621277423]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_my6qp")
