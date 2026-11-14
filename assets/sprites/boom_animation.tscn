@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c8wymveys6w1w"]
+
+[ext_resource type="Texture2D" uid="uid://hialjcefhh5w" path="res://assets/sprites/Boom.png" id="1_5aehv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj021"]
+atlas = ExtResource("1_5aehv")
+region = Rect2(0, 0, 100, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i17f"]
+atlas = ExtResource("1_5aehv")
+region = Rect2(100, 0, 100, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgmmg"]
+atlas = ExtResource("1_5aehv")
+region = Rect2(200, 0, 100, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_21vm0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj021")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgmmg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Boom" type="Node2D" unique_id=1062738063]
+
+[node name="Boom" type="AnimatedSprite2D" parent="." unique_id=845508081]
+sprite_frames = SubResource("SpriteFrames_21vm0")
+frame_progress = 0.73699754
