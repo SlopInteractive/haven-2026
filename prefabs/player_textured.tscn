@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://dfd4mw1oao4"]
+
+[ext_resource type="Script" path="res://scenes/test/player.gd" id="1_eclct"]
+[ext_resource type="Texture2D" uid="uid://cronclvu8q17x" path="res://assets/sprites/arms/arm_01.tres" id="2_ouevn"]
+[ext_resource type="Texture2D" uid="uid://mo2ch6jofjmy" path="res://assets/sprites/Leg.png" id="3_rl1dr"]
+[ext_resource type="Texture2D" uid="uid://b5ddnyw1mdln7" path="res://assets/sprites/torsos/torso_01.tres" id="4_jaikm"]
+[ext_resource type="Texture2D" uid="uid://2tq8jwvce2eq" path="res://assets/sprites/Head.png" id="5_d3yj6"]
+[ext_resource type="Texture2D" uid="uid://c7sj8fri0xakm" path="res://assets/sprites/hair/hair_03.tres" id="6_nmn6l"]
+[ext_resource type="Texture2D" uid="uid://8d80qm73noo8" path="res://assets/sprites/eyes/eyes_01.tres" id="7_2n787"]
+
+[node name="Player" type="Node2D" unique_id=1919550259]
+position = Vector2(0, -20)
+script = ExtResource("1_eclct")
+
+[node name="Left arm" type="RigidBody2D" parent="." unique_id=1498290529]
+position = Vector2(14.999996, -13.000002)
+rotation = -0.071612835
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Left arm" unique_id=287745920]
+modulate = Color(0.58431375, 0.58431375, 0.58431375, 1)
+position = Vector2(8.703033, 23.690872)
+texture = ExtResource("2_ouevn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Left arm" unique_id=1378092331]
+visible = false
+polygon = PackedVector2Array(-28, -36, -24, -31, -23, -26, -26, -26, -25, -4, -15, 7, -5, 10, -5, 15, -10, 16, -7, 19, -8, 22, -12, 22, -14, 19, -15, 23, -19, 23, -21, 15, -37, 4, -42, -4, -40, -24, -35, -34, -33, -36)
+
+[node name="Left leg" type="RigidBody2D" parent="." unique_id=1777473416]
+position = Vector2(24, 60)
+collision_mask = 2
+lock_rotation = true
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Left leg" unique_id=1009944510]
+modulate = Color(0.58477867, 0.58477867, 0.58477867, 1)
+texture = ExtResource("3_rl1dr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Left leg" unique_id=1863322954]
+visible = false
+position = Vector2(-8, -17)
+polygon = PackedVector2Array(-1, -10, 4, -8, 12, 0, 15, 14, 15, 28, 19, 31, 24, 30, 26, 32, 23, 35, 25, 37, 22, 38, 24, 41, 20, 43, 4, 42, -1, 36, -3, 26, -2, 11, -10, 2, -10, -2)
+
+[node name="Torso" type="RigidBody2D" parent="." unique_id=992323357]
+position = Vector2(-8, 15)
+collision_mask = 2
+lock_rotation = true
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Torso" unique_id=1209064843]
+texture = ExtResource("4_jaikm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Torso" unique_id=552470876]
+visible = false
+polygon = PackedVector2Array(-23, -38, 25, -38, 30, -35, 33, -17, 33, 6, 32, 23, 26, 30, 21, 35, 14, 37, -8, 37, -19, 36, -22, 29, -30, 24, -32, 0, -33, -24, -30, -35)
+
+[node name="Right leg" type="RigidBody2D" parent="." unique_id=1120694554]
+position = Vector2(-24, 62.999992)
+rotation = 0.27708086
+scale = Vector2(0.99999994, 0.99999994)
+collision_mask = 2
+lock_rotation = true
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Right leg" unique_id=359039185]
+texture = ExtResource("3_rl1dr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Right leg" unique_id=930606547]
+visible = false
+position = Vector2(-8, -17)
+polygon = PackedVector2Array(-1, -10, 4, -8, 12, 0, 15, 14, 15, 28, 19, 31, 24, 30, 26, 32, 23, 35, 25, 37, 22, 38, 24, 41, 20, 43, 4, 42, -1, 36, -3, 26, -2, 11, -10, 2, -10, -2)
+
+[node name="Right arm" type="RigidBody2D" parent="." unique_id=1394696170]
+position = Vector2(-35, -15.000004)
+rotation = -0.028261185
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Right arm" unique_id=1590423460]
+position = Vector2(8.471245, 21.406502)
+texture = ExtResource("2_ouevn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Right arm" unique_id=1365339672]
+visible = false
+polygon = PackedVector2Array(-28, -36, -24, -31, -23, -26, -26, -26, -25, -4, -15, 7, -5, 10, -5, 15, -10, 16, -7, 19, -8, 22, -12, 22, -14, 19, -15, 23, -19, 23, -21, 15, -37, 4, -42, -4, -40, -24, -35, -34, -33, -36)
+
+[node name="Head" type="RigidBody2D" parent="." unique_id=515103968]
+position = Vector2(-8, 20)
+collision_mask = 2
+lock_rotation = true
+metadata/_edit_group_ = true
+
+[node name="Head" type="Sprite2D" parent="Head" unique_id=1731591550]
+position = Vector2(-1, -69)
+texture = ExtResource("5_d3yj6")
+
+[node name="Hair" type="Sprite2D" parent="Head" unique_id=183177498]
+position = Vector2(-2, -76)
+texture = ExtResource("6_nmn6l")
+
+[node name="Eyes" type="Sprite2D" parent="Head" unique_id=526090605]
+position = Vector2(-1, -73)
+texture = ExtResource("7_2n787")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Head" unique_id=748115172]
+visible = false
+position = Vector2(2, -37)
+polygon = PackedVector2Array(-3, 1, -21, -5, -28, -14, -31, -26, -28, -39, -19, -47, 10, -47, 20, -39, 28, -13, 25, -5, 7, 0)
+
+[node name="Left arm joint" type="PinJoint2D" parent="." unique_id=1998506839]
+position = Vector2(18, -17)
+node_a = NodePath("../Torso")
+node_b = NodePath("../Left arm")
+
+[node name="Right arm joint" type="PinJoint2D" parent="." unique_id=1798970662]
+position = Vector2(-34, -16)
+node_a = NodePath("../Torso")
+node_b = NodePath("../Right arm")
+
+[node name="Left leg joint" type="PinJoint2D" parent="." unique_id=1566298051]
+position = Vector2(16, 41)
+node_a = NodePath("../Torso")
+node_b = NodePath("../Left leg")
+
+[node name="Right leg joint" type="PinJoint2D" parent="." unique_id=522722898]
+position = Vector2(-27, 42)
+node_a = NodePath("../Torso")
+node_b = NodePath("../Right leg")
+
+[node name="Head joint" type="PinJoint2D" parent="." unique_id=1424773527]
+position = Vector2(-7, -17)
+node_a = NodePath("../Torso")
+node_b = NodePath("../Head")
