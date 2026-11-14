@@ -2,22 +2,33 @@
 
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="1_ofchl"]
 [ext_resource type="Texture2D" uid="uid://uelvhslkv8pv" path="res://icon.svg" id="2_88qri"]
+[ext_resource type="Script" uid="uid://basudrj7khkap" path="res://scenes/test/player_controller.gd" id="2_wa75g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_my6qp"]
-size = Vector2(113, 112)
+size = Vector2(113, 81)
 
 [node name="KapTest" type="Node2D" unique_id=884624408]
 
 [node name="Platform" parent="." unique_id=489886513 instance=ExtResource("1_ofchl")]
-position = Vector2(448, 373)
+position = Vector2(295, 340)
+rotation = 0.2984513
+scale = Vector2(0.69153726, 0.8450366)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=734849386]
-position = Vector2(403, 40)
-metadata/_edit_group_ = true
+[node name="Platform2" parent="." unique_id=931321867 instance=ExtResource("1_ofchl")]
+position = Vector2(809, 334)
+rotation = -0.32463124
+scale = Vector2(0.69153726, 0.8450366)
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1052021700]
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=695376995]
+lock_rotation = true
+script = ExtResource("2_wa75g")
+bounce_strength = 800.0
+bounce_delay = 0.05
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=964709701]
+position = Vector2(424, 79)
 texture = ExtResource("2_88qri")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1621277423]
-position = Vector2(-0.5, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=919512229]
+position = Vector2(423.5, 86.5)
 shape = SubResource("RectangleShape2D_my6qp")
