@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://mecpisjf1ohd" path="res://prefabs/player.tscn" id="2_x7yfq"]
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="2_xd32e"]
 [ext_resource type="Texture2D" uid="uid://ty7imnu84tmb" path="res://assets/sprites/background.tres" id="3_xd32e"]
+[ext_resource type="PackedScene" uid="uid://dfd4mw1oao4" path="res://prefabs/player_textured.tscn" id="3_xd32e"]
 
 [node name="TestArena" type="Node2D" unique_id=670349092]
 
@@ -20,8 +21,20 @@ zoom = Vector2(0.48, 0.48)
 [node name="Background" type="Sprite2D" parent="." unique_id=933641310]
 texture = ExtResource("3_xd32e")
 [node name="RigidBody2D" parent="." unique_id=826111072 instance=ExtResource("2_x7yfq")]
+[node name="Player" parent="." unique_id=826111072 instance=ExtResource("2_x7yfq")]
 position = Vector2(421, 293)
 max_contacts_reported = 4
 move_speed = 600.0
 bounce_strength = 800.0
 bounce_delay = 0.0
+
+[node name="Player2" parent="." unique_id=1241401012 instance=ExtResource("2_x7yfq")]
+position = Vector2(1630, 275)
+max_contacts_reported = 4
+move_speed = 600.0
+bounce_strength = 800.0
+bounce_delay = 0.0
+player_id = 2
+
+[node name="Player3" parent="." unique_id=1919550259 instance=ExtResource("3_xd32e")]
+position = Vector2(788, 297)

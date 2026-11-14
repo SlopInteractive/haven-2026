@@ -8,6 +8,11 @@ extends RigidBody2D
 @export var bounce_strength := 600.0
 @export var bounce_delay := 0.2
 
+@export_group("PlayerID")
+@export var player_id := 1
+
+@onready var player_visual: PlayerVisual = $"PlayerVisual"
+
 var bounce_timer := -1.0
 var pending_normal := Vector2.UP
 
@@ -16,8 +21,12 @@ func _ready() -> void:
 	max_contacts_reported = 8
 
 func _physics_process(delta: float) -> void:
-	var direction := Input.get_axis("player1_left", "player2_right")
+	var direction := Input.get_action_strength("player" + str(player_id) + "_right") - Input.get_action_strength("player" + str(player_id) + "_left")
 
+	if direction != 0:
+		player_visual.trigger_midair_walk_animation()
+		player_visual.update_facing(direction)
+	
 	var target_speed := direction * move_speed
 	var force_x := (target_speed - linear_velocity.x) * acceleration
 
@@ -28,6 +37,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		bounce_timer -= state.step
 
 		if bounce_timer <= 0.0:
+			player_visual.trigger_midair_animation()
 			state.apply_central_impulse(pending_normal * bounce_strength)
 			bounce_timer = -1.0
 
