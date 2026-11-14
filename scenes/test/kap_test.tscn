@@ -8,27 +8,29 @@
 size = Vector2(113, 81)
 
 [node name="KapTest" type="Node2D" unique_id=884624408]
+scale = Vector2(0.96877086, 1.0575527)
 
 [node name="Platform" parent="." unique_id=489886513 instance=ExtResource("1_ofchl")]
-position = Vector2(295, 340)
+position = Vector2(957.91473, 188.17026)
 rotation = 0.2984513
 scale = Vector2(0.69153726, 0.8450366)
 
 [node name="Platform2" parent="." unique_id=931321867 instance=ExtResource("1_ofchl")]
-position = Vector2(809, 334)
-rotation = -0.32463124
+position = Vector2(449.02255, 399.0345)
 scale = Vector2(0.69153726, 0.8450366)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=695376995]
+position = Vector2(452.1193, 91.7212)
 lock_rotation = true
 script = ExtResource("2_wa75g")
+move_speed = 600.0
 bounce_strength = 800.0
 bounce_delay = 0.05
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=964709701]
-position = Vector2(424, 79)
 texture = ExtResource("2_88qri")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=919512229]
-position = Vector2(423.5, 86.5)
+visible = false
 shape = SubResource("RectangleShape2D_my6qp")
