@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dfd4mw1oao4"]
 
-[ext_resource type="Script" path="res://scenes/test/player.gd" id="1_eclct"]
 [ext_resource type="Texture2D" uid="uid://cronclvu8q17x" path="res://assets/sprites/arms/arm_01.tres" id="2_ouevn"]
 [ext_resource type="Texture2D" uid="uid://mo2ch6jofjmy" path="res://assets/sprites/Leg.png" id="3_rl1dr"]
+[ext_resource type="Script" uid="uid://d3plgbe8fkqih" path="res://scripts/torso.gd" id="3_wsioq"]
 [ext_resource type="Texture2D" uid="uid://b5ddnyw1mdln7" path="res://assets/sprites/torsos/torso_01.tres" id="4_jaikm"]
 [ext_resource type="Texture2D" uid="uid://2tq8jwvce2eq" path="res://assets/sprites/Head.png" id="5_d3yj6"]
+[ext_resource type="Script" uid="uid://yvd4gdil8t6x" path="res://scripts/head.gd" id="5_ps2bs"]
 [ext_resource type="Texture2D" uid="uid://c7sj8fri0xakm" path="res://assets/sprites/hair/hair_03.tres" id="6_nmn6l"]
 [ext_resource type="Texture2D" uid="uid://8d80qm73noo8" path="res://assets/sprites/eyes/eyes_01.tres" id="7_2n787"]
 
 [node name="Player" type="Node2D" unique_id=1919550259]
-position = Vector2(0, -20)
-script = ExtResource("1_eclct")
+position = Vector2(185, 108)
 
 [node name="Left arm" type="RigidBody2D" parent="." unique_id=1498290529]
 position = Vector2(14.999996, -13.000002)
@@ -30,7 +30,6 @@ polygon = PackedVector2Array(-28, -36, -24, -31, -23, -26, -26, -26, -25, -4, -1
 [node name="Left leg" type="RigidBody2D" parent="." unique_id=1777473416]
 position = Vector2(24, 60)
 collision_mask = 2
-lock_rotation = true
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Left leg" unique_id=1009944510]
@@ -45,7 +44,7 @@ polygon = PackedVector2Array(-1, -10, 4, -8, 12, 0, 15, 14, 15, 28, 19, 31, 24, 
 [node name="Torso" type="RigidBody2D" parent="." unique_id=992323357]
 position = Vector2(-8, 15)
 collision_mask = 2
-lock_rotation = true
+script = ExtResource("3_wsioq")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Torso" unique_id=1209064843]
@@ -60,7 +59,6 @@ position = Vector2(-24, 62.999992)
 rotation = 0.27708086
 scale = Vector2(0.99999994, 0.99999994)
 collision_mask = 2
-lock_rotation = true
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Right leg" unique_id=359039185]
@@ -86,21 +84,21 @@ visible = false
 polygon = PackedVector2Array(-28, -36, -24, -31, -23, -26, -26, -26, -25, -4, -15, 7, -5, 10, -5, 15, -10, 16, -7, 19, -8, 22, -12, 22, -14, 19, -15, 23, -19, 23, -21, 15, -37, 4, -42, -4, -40, -24, -35, -34, -33, -36)
 
 [node name="Head" type="RigidBody2D" parent="." unique_id=515103968]
-position = Vector2(-8, 20)
+position = Vector2(-9, -20)
 collision_mask = 2
-lock_rotation = true
+script = ExtResource("5_ps2bs")
 metadata/_edit_group_ = true
 
 [node name="Head" type="Sprite2D" parent="Head" unique_id=1731591550]
-position = Vector2(-1, -69)
+position = Vector2(0, -31)
 texture = ExtResource("5_d3yj6")
 
 [node name="Hair" type="Sprite2D" parent="Head" unique_id=183177498]
-position = Vector2(-2, -76)
+position = Vector2(-1, -38)
 texture = ExtResource("6_nmn6l")
 
 [node name="Eyes" type="Sprite2D" parent="Head" unique_id=526090605]
-position = Vector2(-1, -73)
+position = Vector2(0, -35)
 texture = ExtResource("7_2n787")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Head" unique_id=748115172]
@@ -112,6 +110,9 @@ polygon = PackedVector2Array(-3, 1, -21, -5, -28, -14, -31, -26, -28, -39, -19, 
 position = Vector2(18, -17)
 node_a = NodePath("../Torso")
 node_b = NodePath("../Left arm")
+angular_limit_enabled = true
+angular_limit_lower = -0.7853982
+angular_limit_upper = 0.7853982
 
 [node name="Right arm joint" type="PinJoint2D" parent="." unique_id=1798970662]
 position = Vector2(-34, -16)
@@ -127,8 +128,12 @@ node_b = NodePath("../Left leg")
 position = Vector2(-27, 42)
 node_a = NodePath("../Torso")
 node_b = NodePath("../Right leg")
+motor_enabled = true
 
 [node name="Head joint" type="PinJoint2D" parent="." unique_id=1424773527]
 position = Vector2(-7, -17)
 node_a = NodePath("../Torso")
 node_b = NodePath("../Head")
+angular_limit_enabled = true
+angular_limit_lower = -0.6981317
+angular_limit_upper = 0.6981317
