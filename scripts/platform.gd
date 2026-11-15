@@ -6,8 +6,17 @@ extends SoftBody2D
 @export var anchor_radius := 40.0
 @export var anchor_zone: Area2D
 
+const COLORS: Array[Variant] = [
+	Color(1, 0, 0),
+	Color(0, 1, 0),
+	Color(0, 0, 1),
+	Color(0.5882353, 0.3254902, 0.93333334),
+	Color(0.6313726, 0.19215687, 0.5529412),
+	Color(0.77254903, 0.12156863, 0.18431373),
+]
 
 func _ready() -> void:
+	color = COLORS[randi() % COLORS.size()]
 	# if not is_connected("baked", _on_baked):
 	# 	connect("baked", _on_baked)
 
