@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://mo2ch6jofjmy" path="res://assets/sprites/Leg.png" id="3_rl1dr"]
 [ext_resource type="Texture2D" uid="uid://b5ddnyw1mdln7" path="res://assets/sprites/torsos/torso_01.tres" id="4_jaikm"]
 [ext_resource type="Texture2D" uid="uid://2tq8jwvce2eq" path="res://assets/sprites/Head.png" id="5_d3yj6"]
-[ext_resource type="Texture2D" uid="uid://c7sj8fri0xakm" path="res://assets/sprites/hair/hair_03.tres" id="6_nmn6l"]
+[ext_resource type="Texture2D" uid="uid://c7sj8fri0xakm" path="res://assets/sprites/hair/hair_01.tres" id="6_nmn6l"]
 [ext_resource type="Texture2D" uid="uid://8d80qm73noo8" path="res://assets/sprites/eyes/eyes_01.tres" id="7_2n787"]
 [ext_resource type="Texture2D" uid="uid://cciln23ha2wfo" path="res://assets/sprites/shoes/shoes_02.tres" id="7_wsioq"]
 

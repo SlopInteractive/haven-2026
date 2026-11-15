@@ -36,16 +36,10 @@ position = Vector2(1, 0)
 [node name="Player" parent="Game" unique_id=826111072 instance=ExtResource("2_x7yfq")]
 position = Vector2(1639, 152)
 max_contacts_reported = 4
-move_speed = 600.0
-bounce_strength = 800.0
-bounce_delay = 0.0
 
 [node name="Player2" parent="Game" unique_id=1241401012 instance=ExtResource("2_x7yfq")]
 position = Vector2(368, 359)
 max_contacts_reported = 4
-move_speed = 600.0
-bounce_strength = 800.0
-bounce_delay = 0.0
 player_id = 2
 
 [node name="Node2D" type="Node2D" parent="Game" unique_id=131809457]
