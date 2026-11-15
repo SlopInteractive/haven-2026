@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmybuy5cg0p2i"]
 
-[ext_resource type="Script" uid="uid://drm7fe8eqeaam" path="res://scenes/test/game_manager.gd" id="1_fi1j2"]
+[ext_resource type="Script" uid="uid://drm7fe8eqeaam" path="res://scripts/game_manager.gd" id="1_fi1j2"]
 [ext_resource type="Texture2D" uid="uid://ty7imnu84tmb" path="res://assets/sprites/background.tres" id="2_e3crw"]
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="3_o0oet"]
 

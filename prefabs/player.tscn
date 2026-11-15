@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://hcwnmm4jkusk" path="res://scripts/player_visual.gd" id="3_rgeog"]
 [ext_resource type="Texture2D" uid="uid://cronclvu8q17x" path="res://assets/sprites/arms/arm_01.tres" id="4_opo22"]
 [ext_resource type="Texture2D" uid="uid://mo2ch6jofjmy" path="res://assets/sprites/Leg.png" id="5_8rb0w"]
+[ext_resource type="Texture2D" uid="uid://cciln23ha2wfo" path="res://assets/sprites/shoes/shoes_02.tres" id="5_rgeog"]
 [ext_resource type="Texture2D" uid="uid://b5ddnyw1mdln7" path="res://assets/sprites/torsos/torso_01.tres" id="6_sd3sa"]
 [ext_resource type="Texture2D" uid="uid://2tq8jwvce2eq" path="res://assets/sprites/Head.png" id="7_m2qjg"]
 [ext_resource type="Texture2D" uid="uid://csviawn553kk0" path="res://assets/sprites/hair/hair_03.tres" id="8_llb5v"]
@@ -172,7 +173,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.34906584]
+"values": [0.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -184,7 +185,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.87266463]
+"values": [0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -377,9 +378,13 @@ offset = Vector2(7, 25)
 [node name="BackLeg" type="Sprite2D" parent="PlayerVisual" unique_id=1009944510]
 modulate = Color(0.58477867, 0.58477867, 0.58477867, 1)
 position = Vector2(18, 46)
-rotation = 0.87266463
 texture = ExtResource("5_8rb0w")
 offset = Vector2(7, 17)
+
+[node name="BackShoe" type="Sprite2D" parent="PlayerVisual/BackLeg" unique_id=71557103]
+position = Vector2(-4, -4)
+texture = ExtResource("5_rgeog")
+offset = Vector2(12, 20)
 
 [node name="Torso" type="Sprite2D" parent="PlayerVisual" unique_id=1209064843]
 position = Vector2(-8, 15)
@@ -402,10 +407,15 @@ texture = ExtResource("9_x0bak")
 
 [node name="FrontLeg" type="Sprite2D" parent="PlayerVisual" unique_id=359039185]
 position = Vector2(-27.000004, 44.000008)
-rotation = -0.34906584
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("5_8rb0w")
 offset = Vector2(7, 17)
+
+[node name="FrontShoe" type="Sprite2D" parent="PlayerVisual/FrontLeg" unique_id=196144987]
+position = Vector2(-5.999996, -4.0000076)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("5_rgeog")
+offset = Vector2(12, 20)
 
 [node name="FrontArm" type="Sprite2D" parent="PlayerVisual" unique_id=1590423460]
 position = Vector2(-35, -16)
