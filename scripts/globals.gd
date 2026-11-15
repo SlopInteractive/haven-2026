@@ -24,3 +24,19 @@ var player_wins : Dictionary[int, int] = {
 }
 
 var crt_enabled := true
+
+func clear():
+	player_count = 0
+	selected_shirts = [0, 0]
+	player_skins = {
+		1: {},
+		2: {},
+		3: {},
+		4: {},
+	}
+	player_wins = {
+		1: 0,
+		2: 0,
+		3: 0,
+		4: 0,
+	}

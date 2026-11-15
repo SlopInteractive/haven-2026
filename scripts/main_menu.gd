@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	Globals.clear();
+
 func _choose_two_players(): 
 	Globals.player_count = 2
 	get_tree().change_scene_to_file("res://scenes/character_select.scn")
