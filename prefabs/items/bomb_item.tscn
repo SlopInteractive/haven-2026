@@ -94,6 +94,8 @@ collision_layer = 14
 collision_mask = 13
 script = ExtResource("1_8pahb")
 explosion_force = 7000.0
+throw_force = 1000.0
+throw_upward_force = 250.0
 
 [node name="Label" type="Label" parent="." unique_id=1644890289]
 visible = false

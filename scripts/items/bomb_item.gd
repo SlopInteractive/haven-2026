@@ -12,7 +12,7 @@ extends IItem
 @export var throw_upward_force: float = 350.0
 
 # secs
-const TIME := 10
+const TIME := 4
 var activated := false
 
 var time_left := 0.0
@@ -71,7 +71,7 @@ func _process(delta: float):
 		time_left -= delta
 		
 		var in_secs := int(time_left)
-		label.text = str(in_secs)
+		label.text = str(in_secs+1)
 		
 		if time_left <= 0.0:
 			detonate()

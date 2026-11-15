@@ -8,8 +8,8 @@ extends SoftBody2D
 
 
 func _ready() -> void:
-	if not is_connected("baked", _on_baked):
-		connect("baked", _on_baked)
+	# if not is_connected("baked", _on_baked):
+	# 	connect("baked", _on_baked)
 
 	# Handle softbodies already generated in the editor.
 	_anchor_bottom.call_deferred()
