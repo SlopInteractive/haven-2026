@@ -21,6 +21,11 @@ class_name PlayerController
 @onready var player_visual: PlayerVisual = $"PlayerVisual"
 @onready var item_grabber: Area2D = $"ItemGrab"
 
+@onready var attack_area: Area2D = $"AttackArea"
+
+@export_group("Attack")
+@export var attack_force := 1000.0
+
 var bounce_timer := -1.0
 var pending_normal := Vector2.UP
 var item_in_hand: IItem = null
@@ -33,6 +38,15 @@ var dash_timer := 0.0
 var has_jump := false
 
 var item_cooldown := 0.0
+
+func attack() -> void:
+	for body in attack_area.get_overlapping_bodies():
+		# print(body)
+		if body is PlayerController and body != self:
+			# print("Attacking player: ", body)
+			var direction := (body.global_position - global_position).normalized()
+			# print(direction)
+			body.apply_external_force(direction * attack_force)
 
 func equip_item(item: IItem) -> void:
 	if item_cooldown > 0.0:
@@ -100,6 +114,7 @@ func _physics_process(delta: float) -> void:
 		if item_in_hand:
 			item_in_hand.on_interact(self)
 		else:
+			attack()
 			player_visual.start_holding()
 
 	if Input.is_action_just_released(_translate_action("interact")) and item_in_hand == null:

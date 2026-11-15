@@ -9,11 +9,20 @@
 [node name="TestArena" type="Node2D" unique_id=670349092]
 
 [node name="Platform2" parent="." unique_id=307776202 instance=ExtResource("2_xd32e")]
-position = Vector2(366, 760)
+position = Vector2(240.99994, 757)
 rotation = 0.41907033
 
+[node name="Platform4" parent="." unique_id=489886513 instance=ExtResource("2_xd32e")]
+position = Vector2(253, -32.000008)
+rotation = 2.5539942
+
+[node name="Platform5" parent="." unique_id=1465738843 instance=ExtResource("2_xd32e")]
+position = Vector2(1608, -53.000008)
+rotation = 3.5113616
+
 [node name="Platform3" parent="." unique_id=706100489 instance=ExtResource("2_xd32e")]
-position = Vector2(1681, 783)
+position = Vector2(1541, 730.9998)
+rotation = -0.5293951
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2108395026]
 position = Vector2(1020, 349)

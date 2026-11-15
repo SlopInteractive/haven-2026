@@ -300,7 +300,7 @@ graph_offset = Vector2(156.24144, 46)
 size = Vector2(157.5, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ww3k"]
-size = Vector2(62, 60)
+size = Vector2(82, 111)
 
 [node name="Player" type="RigidBody2D" unique_id=826111072]
 collision_layer = 3
@@ -395,8 +395,19 @@ position = Vector2(-42.25, -2)
 scale = Vector2(1.0398358, 1.0951542)
 shape = SubResource("RectangleShape2D_my6qp")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=746864363]
+[node name="AttackArea" type="Area2D" parent="." unique_id=746864363]
+visible = false
+collision_layer = 0
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=693593663]
-position = Vector2(21, 10)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=693593663]
+visible = false
+position = Vector2(-3.5, 1)
+shape = SubResource("RectangleShape2D_3ww3k")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1174899587]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=174252226]
 shape = SubResource("RectangleShape2D_3ww3k")
