@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://c6fkcxq82m8io"]
+
+[ext_resource type="Theme" uid="uid://jy4ak13ehfxm" path="res://assets/themes/player_customization.tres" id="1_3h23n"]
+[ext_resource type="Script" uid="uid://cw542ukc6hnyo" path="res://scripts/player_customization.gd" id="2_qky1d"]
+[ext_resource type="Texture2D" uid="uid://dlx3c21gixc2d" path="res://assets/sprites/Arrow.png" id="4_4yrs5"]
+[ext_resource type="PackedScene" uid="uid://dfd4mw1oao4" path="res://prefabs/player_textured.tscn" id="4_tp4rq"]
+
+[node name="PlayerCustomization" type="Control" unique_id=576592113]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1760.0
+offset_bottom = -880.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3h23n")
+script = ExtResource("2_qky1d")
+
+[node name="Eyes_right" type="TextureButton" parent="." unique_id=1960958441]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 33.0
+offset_right = 219.0
+offset_bottom = 133.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_4yrs5")
+
+[node name="Shirt_right" type="TextureButton" parent="." unique_id=1549377108]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 71.0
+offset_right = 218.0
+offset_bottom = 171.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_4yrs5")
+
+[node name="Hair_right" type="TextureButton" parent="." unique_id=1241858792]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 2.0
+offset_right = 218.0
+offset_bottom = 102.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_4yrs5")
+
+[node name="Eyes_left" type="TextureButton" parent="." unique_id=432389286]
+layout_mode = 0
+offset_top = 35.000015
+offset_right = 100.0
+offset_bottom = 135.00002
+scale = Vector2(0.3, 0.3)
+theme = ExtResource("1_3h23n")
+texture_normal = ExtResource("4_4yrs5")
+flip_h = true
+
+[node name="Shirt_left" type="TextureButton" parent="." unique_id=157857093]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 69.0
+offset_right = 101.0
+offset_bottom = 169.0
+scale = Vector2(0.3, 0.3)
+theme = ExtResource("1_3h23n")
+texture_normal = ExtResource("4_4yrs5")
+flip_h = true
+
+[node name="Hair_left" type="TextureButton" parent="." unique_id=725911426]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 100.0
+offset_bottom = 101.0
+scale = Vector2(0.3, 0.3)
+theme = ExtResource("1_3h23n")
+texture_normal = ExtResource("4_4yrs5")
+flip_h = true
+
+[node name="Shoe_right" type="TextureButton" parent="." unique_id=1485143583]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 149.0
+offset_right = 222.0
+offset_bottom = 249.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_4yrs5")
+
+[node name="Shoe_left" type="TextureButton" parent="." unique_id=1287628797]
+layout_mode = 0
+offset_top = 146.0
+offset_right = 100.0
+offset_bottom = 246.0
+scale = Vector2(0.3, 0.3)
+theme = ExtResource("1_3h23n")
+texture_normal = ExtResource("4_4yrs5")
+flip_h = true
+
+[node name="Player" parent="." unique_id=1919550259 instance=ExtResource("4_tp4rq")]
+position = Vector2(80, 81)
+
+[connection signal="pressed" from="Eyes_right" to="." method="next_eyes"]
+[connection signal="pressed" from="Shirt_right" to="." method="next_shirt"]
+[connection signal="pressed" from="Hair_right" to="." method="next_hair"]
+[connection signal="pressed" from="Eyes_left" to="." method="prev_eyes"]
+[connection signal="pressed" from="Shirt_left" to="." method="prev_shirt"]
+[connection signal="pressed" from="Hair_left" to="." method="prev_hair"]
+[connection signal="pressed" from="Shoe_right" to="." method="next_shoes"]
+[connection signal="pressed" from="Shoe_left" to="." method="prev_shoes"]

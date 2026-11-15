@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://cr06hsb6ee23m"]
+
+[ext_resource type="FontFile" uid="uid://b1kaed42jl2k5" path="res://assets/Pixelartfont-Regular.otf" id="1_lru3c"]
+[ext_resource type="StyleBox" uid="uid://c5g8718olxc51" path="res://assets/themes/styleboxes/button_darker.tres" id="2_hahhc"]
+[ext_resource type="StyleBox" uid="uid://b6srfd27j074h" path="res://assets/themes/styleboxes/button.tres" id="2_lru3c"]
+
+[resource]
+Button/font_sizes/font_size = 70
+Button/fonts/font = ExtResource("1_lru3c")
+Button/styles/hover = ExtResource("2_hahhc")
+Button/styles/hover_pressed = ExtResource("2_hahhc")
+Button/styles/normal = ExtResource("2_lru3c")
+Button/styles/pressed = ExtResource("2_hahhc")
+HBoxContainer/constants/separation = 20

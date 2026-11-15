@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://xv8fvvlnha4u"]
+
+[ext_resource type="Theme" uid="uid://cr06hsb6ee23m" path="res://assets/themes/main_menu.tres" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://b1e7eptrfb4dw" path="res://assets/sprites/MainMenu.png" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://xkmi2ksvpxqx" path="res://scripts/main_menu.gd" id="2_bqqt6"]
+
+[node name="MainMenu" type="Control" unique_id=1432452468]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ekxnf")
+script = ExtResource("2_bqqt6")
+
+[node name="Main manu" type="Sprite2D" parent="." unique_id=381817411]
+position = Vector2(960, 540)
+texture = ExtResource("1_l6cm7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=905094969]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 790.0
+offset_right = 1497.0
+offset_bottom = 947.0
+alignment = 1
+
+[node name="2P" type="Button" parent="HBoxContainer" unique_id=1083428920]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "2P"
+
+[node name="3P" type="Button" parent="HBoxContainer" unique_id=1893669970]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "3P   "
+
+[node name="4P" type="Button" parent="HBoxContainer" unique_id=1079990051]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4p
+"
+
+[connection signal="pressed" from="HBoxContainer/2P" to="." method="_choose_two_players"]
+[connection signal="pressed" from="HBoxContainer/3P" to="." method="_choose_three_players"]
+[connection signal="pressed" from="HBoxContainer/4P" to="." method="_choose_four_players"]

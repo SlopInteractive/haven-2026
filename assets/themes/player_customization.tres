@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://jy4ak13ehfxm"]
+
+[ext_resource type="FontFile" uid="uid://b1kaed42jl2k5" path="res://assets/Pixelartfont-Regular.otf" id="1_q4tkc"]
+[ext_resource type="Texture2D" uid="uid://dlx3c21gixc2d" path="res://assets/sprites/Arrow.png" id="2_fpkwr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4asb3"]
+texture = ExtResource("2_fpkwr")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[resource]
+Button/fonts/font = ExtResource("1_q4tkc")
+button_left/styles/normal = SubResource("StyleBoxTexture_4asb3")

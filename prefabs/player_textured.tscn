@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dfd4mw1oao4"]
 
+[ext_resource type="Script" uid="uid://cf3kc6itbjlul" path="res://scripts/customizable_player.gd" id="1_ps2bs"]
 [ext_resource type="Texture2D" uid="uid://cronclvu8q17x" path="res://assets/sprites/arms/arm_01.tres" id="2_ouevn"]
 [ext_resource type="Texture2D" uid="uid://mo2ch6jofjmy" path="res://assets/sprites/Leg.png" id="3_rl1dr"]
 [ext_resource type="Texture2D" uid="uid://b5ddnyw1mdln7" path="res://assets/sprites/torsos/torso_01.tres" id="4_jaikm"]
@@ -65,7 +66,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_lgqep"]
 resource_name = "in_air"
-length = 0.19999999999999998
+length = 0.2
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -94,7 +95,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_w0vop"]
 resource_name = "walk"
-length = 0.39999999999999997
+length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -141,7 +142,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.34906584]
+"values": [0.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -153,7 +154,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.87266463]
+"values": [0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -170,7 +171,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_apj6t"]
 resource_name = "in_air"
-length = 0.19999999999999998
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -198,7 +199,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_mh6xa"]
 resource_name = "walk"
-length = 0.39999999999999997
+length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -245,6 +246,7 @@ _data = {
 }
 
 [node name="Player" type="Node2D" unique_id=1919550259]
+script = ExtResource("1_ps2bs")
 
 [node name="BackArm" type="Sprite2D" parent="." unique_id=287745920]
 modulate = Color(0.58431375, 0.58431375, 0.58431375, 1)
@@ -257,7 +259,6 @@ offset = Vector2(7, 25)
 [node name="BackLeg" type="Sprite2D" parent="." unique_id=1009944510]
 modulate = Color(0.58477867, 0.58477867, 0.58477867, 1)
 position = Vector2(18, 46)
-rotation = 0.87266463
 texture = ExtResource("3_rl1dr")
 offset = Vector2(12, 20)
 
@@ -277,7 +278,7 @@ position = Vector2(0, -31)
 texture = ExtResource("5_d3yj6")
 
 [node name="Hair" type="Sprite2D" parent="Head2" unique_id=183177498]
-position = Vector2(-1, -38)
+position = Vector2(-1.0678797, -35)
 texture = ExtResource("6_nmn6l")
 
 [node name="Eyes" type="Sprite2D" parent="Head2" unique_id=526090605]
@@ -286,7 +287,6 @@ texture = ExtResource("7_2n787")
 
 [node name="FrontLeg" type="Sprite2D" parent="." unique_id=359039185]
 position = Vector2(-27.000004, 44.000008)
-rotation = -0.34906584
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("3_rl1dr")
 offset = Vector2(12, 20)
