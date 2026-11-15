@@ -1,13 +1,8 @@
 [gd_scene format=3 uid="uid://dysqfav7lv7lx"]
 
 [ext_resource type="Script" uid="uid://cmgi4kiydqqix" path="res://scripts/items/grenade_item.gd" id="1_xkhnn"]
-[ext_resource type="FontFile" uid="uid://b1kaed42jl2k5" path="res://assets/Pixelartfont-Regular.otf" id="2_kjpo7"]
 [ext_resource type="Texture2D" uid="uid://cq8r2gtj4ksv0" path="res://assets/sprites/Grenade.png" id="3_xkhnn"]
 [ext_resource type="Texture2D" uid="uid://hialjcefhh5w" path="res://assets/sprites/Boom.png" id="4_vkju1"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_my6qp"]
-font = ExtResource("2_kjpo7")
-font_size = 48
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cj021"]
 atlas = ExtResource("4_vkju1")
@@ -97,17 +92,8 @@ collision_layer = 14
 collision_mask = 13
 script = ExtResource("1_xkhnn")
 
-[node name="Label" type="Label" parent="." unique_id=1644890289]
-visible = false
-offset_left = -37.0
-offset_top = -85.0
-offset_right = 34.0
-offset_bottom = -26.0
-text = "10"
-label_settings = SubResource("LabelSettings_my6qp")
-horizontal_alignment = 1
-
 [node name="HoldItem" type="Sprite2D" parent="." unique_id=1475102029]
+scale = Vector2(2.039999, 2.039999)
 texture = ExtResource("3_xkhnn")
 
 [node name="BoomAnim" type="AnimatedSprite2D" parent="." unique_id=845508081]
@@ -123,6 +109,7 @@ disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=536390291]
 position = Vector2(-1, 3)
+scale = Vector2(2.039999, 2.039999)
 shape = SubResource("RectangleShape2D_my6qp")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=846404372]
