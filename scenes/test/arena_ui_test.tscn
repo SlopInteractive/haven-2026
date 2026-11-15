@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bhqcnwbi0rt63"]
+
+[ext_resource type="Script" uid="uid://drm7fe8eqeaam" path="res://scenes/test/game_manager.gd" id="1_2cg15"]
+
+[node name="ArenaUITest" type="Node2D" unique_id=1517936273]
+script = ExtResource("1_2cg15")
+
+[node name="player1_marker" type="Marker2D" parent="." unique_id=956780563]
+position = Vector2(273, 232)
+
+[node name="player2_marker" type="Marker2D" parent="." unique_id=930391116]
+position = Vector2(1454, 236)
+
+[node name="player3_marker" type="Marker2D" parent="." unique_id=1822999920]
+position = Vector2(288, 627)
+
+[node name="player4_marker" type="Marker2D" parent="." unique_id=244644233]
+position = Vector2(1469, 631)
