@@ -16,14 +16,21 @@ class_name PlayerController
 @export var starting_item: PackedScene
 
 @export_group("External Forces")
-@export var external_force_decay := 300.0
+@export var external_force_decay := 700.0
 
 @onready var player_visual: PlayerVisual = $"PlayerVisual"
 
 var bounce_timer := -1.0
 var pending_normal := Vector2.UP
-
 var item_in_hand: IItem = null
+
+var facing_left := false
+
+@export var DASH_COOLDOWN := 3.0
+var dash_timer := 0.0
+
+var has_jump := false
+
 
 func equip_item(item: IItem) -> void:
 	item.position = Vector2.ZERO
@@ -62,6 +69,8 @@ func _translate_action(action: String) -> String:
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_action_strength(_translate_action("right")) - Input.get_action_strength(_translate_action("left"))
 
+	dash_timer = max(dash_timer - delta, 0.0)
+
 	if Input.is_action_just_pressed(_translate_action("interact")):
 		if item_in_hand:
 			item_in_hand.on_interact(self)
@@ -71,9 +80,25 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released(_translate_action("interact")) and item_in_hand == null:
 		player_visual.stop_holding()
 
+	if Input.is_action_just_pressed(_translate_action("dash")):
+		if dash_timer <= 0.0:
+			dash_timer = DASH_COOLDOWN
+			
+			var dash_direction := Vector2.RIGHT if direction > 0 else Vector2.LEFT
+			if direction == 0:
+				dash_direction = Vector2.LEFT if facing_left else Vector2.RIGHT
+				
+			apply_external_force(dash_direction * 1000.0)
+
+	if Input.is_action_just_pressed(_translate_action("up")):
+		if has_jump:
+			apply_central_impulse(Vector2.UP * 700.0)
+			has_jump = false
+
 	if direction != 0:
 		player_visual.trigger_midair_walk_animation()
 		player_visual.update_facing(direction)
+		facing_left = direction < 0
 		
 	var target_speed := direction * move_speed
 	var force_x := (target_speed - linear_velocity.x + external_velocity.x) * acceleration
@@ -94,6 +119,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 			player_visual.trigger_midair_animation()
 			state.apply_central_impulse(pending_normal * bounce_strength)
 			bounce_timer = -1.0
+			has_jump = true
 
 		return
 

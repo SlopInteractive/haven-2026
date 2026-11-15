@@ -22,6 +22,7 @@ func _ready() -> void:
 
 func _on_boom_anim_animation_finished():
 	boom_anim.hide()
+	queue_free()
 
 func detonate() -> void:
 	label.hide()
@@ -85,7 +86,7 @@ func on_interact(player: PlayerController) -> void:
 	player.unequip_item()
 	freeze = false
 	
-	var direction := Vector2.RIGHT if player.scale.x > 0 else Vector2.LEFT
+	var direction := Vector2.LEFT if player.facing_left else Vector2.RIGHT
 	
 	# Apply throw impulse.
 	apply_central_impulse(

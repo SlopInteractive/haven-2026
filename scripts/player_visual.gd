@@ -68,4 +68,11 @@ func stop_holding():
 	play_state(arm_playback, &"idle")
 
 func update_facing(direction: float):
+	# $"FrontArm".flip_h = direction < 0
+	# $"BackArm".flip_h = direction < 0
+	# $"Torso".flip_h = direction < 0
+	# $"Head2/Hair".flip_h = direction < 0
+	# $"Head2/Eyes".flip_h = direction < 0
+	# 
+	
 	self.scale.x = -1 if direction < 0 else 1
