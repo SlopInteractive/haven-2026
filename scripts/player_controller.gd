@@ -39,7 +39,13 @@ var has_jump := false
 
 var item_cooldown := 0.0
 
+var attack_cooldown := 0.0
+
 func attack() -> void:
+	if attack_cooldown > 0.0:
+		return
+	
+	player_visual.trigger_attack_animation()
 	for body in attack_area.get_overlapping_bodies():
 		# print(body)
 		if body is PlayerController and body != self:
@@ -109,13 +115,13 @@ func _physics_process(delta: float) -> void:
 
 	dash_timer = max(dash_timer - delta, 0.0)
 	item_cooldown = max(item_cooldown - delta, 0.0)
+	attack_cooldown = max(attack_cooldown - delta, 0.0)
 
 	if Input.is_action_just_pressed(_translate_action("interact")):
 		if item_in_hand:
 			item_in_hand.on_interact(self)
 		else:
 			attack()
-			player_visual.start_holding()
 
 	if Input.is_action_just_released(_translate_action("interact")) and item_in_hand == null:
 		player_visual.stop_holding()

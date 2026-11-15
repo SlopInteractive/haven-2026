@@ -67,6 +67,34 @@ tracks/1/keys = {
 "values": [0.0, -0.7853981633974483]
 }
 
+[sub_resource type="Animation" id="Animation_kbsxf"]
+resource_name = "hit"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FrontArm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -2.4713862208239705]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackArm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -2.5150194521238287]
+}
+
 [sub_resource type="Animation" id="Animation_lgqep"]
 resource_name = "in_air"
 length = 0.2
@@ -127,6 +155,7 @@ tracks/1/keys = {
 _data = {
 &"RESET": SubResource("Animation_wsioq"),
 &"grab": SubResource("Animation_ps2bs"),
+&"hit": SubResource("Animation_kbsxf"),
 &"in_air": SubResource("Animation_lgqep"),
 &"walk": SubResource("Animation_w0vop")
 }
@@ -248,6 +277,9 @@ _data = {
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sd3sa"]
 animation = &"grab"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kbsxf"]
+animation = &"hit"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rgeog"]
 animation = &"RESET"
 
@@ -283,18 +315,30 @@ xfade_time = 0.2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_edtk3"]
 xfade_time = 0.4
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q2wkl"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f2e50"]
+xfade_time = 0.8
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_22xyk"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nmymu"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3ww3k"]
 states/Start/position = Vector2(208, 110.4)
 states/grab/node = SubResource("AnimationNodeAnimation_sd3sa")
-states/grab/position = Vector2(397.6, 280.2)
+states/grab/position = Vector2(312, 285)
+states/hit/node = SubResource("AnimationNodeAnimation_kbsxf")
+states/hit/position = Vector2(702.6414, 276.15997)
 states/idle/node = SubResource("AnimationNodeAnimation_rgeog")
-states/idle/position = Vector2(382.8, 164)
+states/idle/position = Vector2(696.4, -24.8)
 states/in_air/node = SubResource("AnimationNodeAnimation_opo22")
-states/in_air/position = Vector2(533.8786, 100.00051)
+states/in_air/position = Vector2(602.6786, 138.40051)
 states/walk/node = SubResource("AnimationNodeAnimation_8rb0w")
-states/walk/position = Vector2(533.83997, 233.6)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_sd3sa"), "in_air", "walk", SubResource("AnimationNodeStateMachineTransition_rgeog"), "walk", "in_air", SubResource("AnimationNodeStateMachineTransition_opo22"), "walk", "grab", SubResource("AnimationNodeStateMachineTransition_m2qjg"), "grab", "walk", SubResource("AnimationNodeStateMachineTransition_llb5v"), "in_air", "grab", SubResource("AnimationNodeStateMachineTransition_lulei"), "grab", "idle", SubResource("AnimationNodeStateMachineTransition_8rb0w"), "idle", "grab", SubResource("AnimationNodeStateMachineTransition_edtk3")]
-graph_offset = Vector2(156.24144, 46)
+states/walk/position = Vector2(527.43994, 285.75998)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_sd3sa"), "in_air", "walk", SubResource("AnimationNodeStateMachineTransition_rgeog"), "walk", "in_air", SubResource("AnimationNodeStateMachineTransition_opo22"), "walk", "grab", SubResource("AnimationNodeStateMachineTransition_m2qjg"), "grab", "walk", SubResource("AnimationNodeStateMachineTransition_llb5v"), "in_air", "grab", SubResource("AnimationNodeStateMachineTransition_lulei"), "grab", "idle", SubResource("AnimationNodeStateMachineTransition_8rb0w"), "idle", "grab", SubResource("AnimationNodeStateMachineTransition_edtk3"), "walk", "hit", SubResource("AnimationNodeStateMachineTransition_q2wkl"), "hit", "idle", SubResource("AnimationNodeStateMachineTransition_f2e50"), "idle", "hit", SubResource("AnimationNodeStateMachineTransition_22xyk"), "in_air", "hit", SubResource("AnimationNodeStateMachineTransition_nmymu")]
+graph_offset = Vector2(230.24146, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_my6qp"]
 size = Vector2(157.5, 50)

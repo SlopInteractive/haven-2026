@@ -50,8 +50,8 @@ func play_state(playback: AnimationNodeStateMachinePlayback, state: StringName):
 	playback.travel(state)
 
 func trigger_midair_animation():
-	if !is_holding:
-		play_state(arm_playback, &"in_air")
+	# if !is_holding:
+	# 	play_state(arm_playback, &"in_air")
 	play_state(leg_playback, &"in_air")
 
 func trigger_midair_walk_animation():
@@ -66,6 +66,9 @@ func start_holding():
 func stop_holding():
 	is_holding = false
 	play_state(arm_playback, &"idle")
+
+func trigger_attack_animation():
+	play_state(arm_playback, &"hit")
 
 func update_facing(direction: float):
 	# $"FrontArm".flip_h = direction < 0
