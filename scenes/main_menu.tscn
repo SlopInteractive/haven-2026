@@ -16,8 +16,8 @@ theme = ExtResource("1_ekxnf")
 script = ExtResource("2_bqqt6")
 
 [node name="Main manu" type="Sprite2D" parent="." unique_id=381817411]
-position = Vector2(960, 540)
 texture = ExtResource("1_l6cm7")
+centered = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=905094969]
 layout_mode = 0
