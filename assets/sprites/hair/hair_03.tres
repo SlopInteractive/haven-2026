@@ -1,7 +1,7 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://c7sj8fri0xakm"]
+[gd_resource type="AtlasTexture" format=3 uid="uid://csviawn553kk0"]
 
-[ext_resource type="Texture2D" uid="uid://bkpnq4tmchnlk" path="res://assets/sprites/HairSheet.png" id="1_qgvay"]
+[ext_resource type="Texture2D" uid="uid://bkpnq4tmchnlk" path="res://assets/sprites/HairSheet.png" id="1_la021"]
 
 [resource]
-atlas = ExtResource("1_qgvay")
-region = Rect2(140, 0, 70, 0)
+atlas = ExtResource("1_la021")
+region = Rect2(0, 0, 70, 0)

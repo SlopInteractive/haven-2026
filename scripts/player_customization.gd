@@ -24,6 +24,7 @@ func _ready() -> void:
 	change(SHIRT, 1)
 	change(EYES, 1)
 	change(HAIR, 1)
+	change(SHOES, 1)
 enum {
 	SHIRT = 1, 
 	EYES, 
