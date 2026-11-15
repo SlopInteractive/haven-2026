@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dybgcy3nn3217"]
 
-[ext_resource type="Script" uid="uid://drm7fe8eqeaam" path="res://scenes/test/game_manager.gd" id="1_jnfdu"]
+[ext_resource type="Script" uid="uid://drm7fe8eqeaam" path="res://scripts/game_manager.gd" id="1_jnfdu"]
 [ext_resource type="Texture2D" uid="uid://ty7imnu84tmb" path="res://assets/sprites/background.tres" id="2_1f2k4"]
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="3_ftykd"]
+[ext_resource type="PackedScene" uid="uid://cn8ja7xm01eh1" path="res://prefabs/postfx.tscn" id="4_1f2k4"]
 
 [node name="ArenaUITest" type="Node2D" unique_id=1517936273]
 script = ExtResource("1_jnfdu")
@@ -32,3 +33,5 @@ scale = Vector2(1.2000006, 1)
 position = Vector2(1480, 836)
 rotation = -0.2617994
 scale = Vector2(1.2000006, 1)
+
+[node name="CanvasLayer" parent="." unique_id=132188769 instance=ExtResource("4_1f2k4")]

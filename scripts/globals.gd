@@ -15,3 +15,5 @@ var player_skins : Dictionary[int, Dictionary] = {
 	3: {},
 	4: {},
 }
+
+var crt_enabled := true

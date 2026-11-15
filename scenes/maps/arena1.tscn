@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="3_reg8o"]
 [ext_resource type="Script" uid="uid://boil518tch1ka" path="res://scripts/item_spawner.gd" id="4_reg8o"]
 [ext_resource type="PackedScene" uid="uid://c0wjoekreewvw" path="res://prefabs/items/FloatingItem.tscn" id="5_gaftl"]
+[ext_resource type="PackedScene" uid="uid://cn8ja7xm01eh1" path="res://prefabs/postfx.tscn" id="6_c8oqu"]
 
 [node name="ArenaUITest" type="Node2D" unique_id=1517936273]
 script = ExtResource("1_7xruq")
@@ -49,3 +50,5 @@ scale = Vector2(0.6, 1)
 position = Vector2(963, 379)
 script = ExtResource("4_reg8o")
 item_scene = ExtResource("5_gaftl")
+
+[node name="CanvasLayer" parent="." unique_id=132188769 instance=ExtResource("6_c8oqu")]

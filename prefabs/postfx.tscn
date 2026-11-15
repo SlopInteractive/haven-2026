@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cn8ja7xm01eh1"]
+
+[ext_resource type="Script" uid="uid://yg540pyhocbj" path="res://scenes/crt_effect.gd" id="1_qlbdu"]
+[ext_resource type="Shader" uid="uid://vabgsm6hwmjf" path="res://shaders/crt_shader.gdshader" id="2_hoiqo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ww3k"]
+shader = ExtResource("2_hoiqo")
+
+[sub_resource type="QuadMesh" id="QuadMesh_my6qp"]
+size = Vector2(1920, 1080)
+center_offset = Vector3(960, 540, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=132188769]
+script = ExtResource("1_qlbdu")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=307155702]
+material = SubResource("ShaderMaterial_3ww3k")
+mesh = SubResource("QuadMesh_my6qp")

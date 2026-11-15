@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://cr06hsb6ee23m" path="res://assets/themes/main_menu.tres" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://b1e7eptrfb4dw" path="res://assets/sprites/MainMenu.png" id="1_l6cm7"]
 [ext_resource type="Script" uid="uid://xkmi2ksvpxqx" path="res://scripts/main_menu.gd" id="2_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://cn8ja7xm01eh1" path="res://prefabs/postfx.tscn" id="4_wu84c"]
 
 [node name="MainMenu" type="Control" unique_id=1432452468]
 layout_mode = 3
@@ -41,6 +42,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "4p
 "
+
+[node name="PostFX" parent="." unique_id=132188769 instance=ExtResource("4_wu84c")]
 
 [connection signal="pressed" from="HBoxContainer/2P" to="." method="_choose_two_players"]
 [connection signal="pressed" from="HBoxContainer/3P" to="." method="_choose_three_players"]
