@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhqcnwbi0rt63"]
 
-[ext_resource type="Script" uid="uid://drm7fe8eqeaam" path="res://scenes/test/game_manager.gd" id="1_2cg15"]
+[ext_resource type="Script" uid="uid://drm7fe8eqeaam" path="res://scripts/game_manager.gd" id="1_2cg15"]
 
 [node name="ArenaUITest" type="Node2D" unique_id=1517936273]
 script = ExtResource("1_2cg15")

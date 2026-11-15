@@ -6,6 +6,7 @@ class_name PlayerVisual
 @export var torso_tex_id := 1
 @export var hair_tex_id := 1
 @export var eyes_tex_id := 1
+@export var shoes_tex_id := 1
 
 @onready var arms_animator: AnimationPlayer = $"Arms"
 @onready var legs_animator: AnimationPlayer = $"Legs"
@@ -29,6 +30,10 @@ func change_hair(index: int):
 func change_eyes(index: int):
 	$"Head2/Eyes".texture = load( "res://assets/sprites/eyes/eyes_0" + str(index) + ".tres")
 
+func change_shoes(index: int):
+	$"BackLeg/BackShoe".texture = load( "res://assets/sprites/shoes/shoes_0" + str(index) + ".tres")
+	$"FrontLeg/FrontShoe".texture = load( "res://assets/sprites/shoes/shoes_0" + str(index) + ".tres")
+
 func _ready():
 	apply_textures()
 	arm_anim_tree.active = true
@@ -38,6 +43,7 @@ func apply_textures():
 	change_shirt(torso_tex_id)
 	change_hair(hair_tex_id)
 	change_eyes(eyes_tex_id)
+	change_shoes(shoes_tex_id)
 
 func play_state(playback: AnimationNodeStateMachinePlayback, state: StringName):
 	if playback.get_current_node() == state:

@@ -14,6 +14,8 @@ func _ready() -> void:
 		player.get_node("PlayerVisual").torso_tex_id = Globals.player_skins[i][Globals.SHIRT]
 		player.get_node("PlayerVisual").eyes_tex_id = Globals.player_skins[i][Globals.EYES]
 		player.get_node("PlayerVisual").hair_tex_id = Globals.player_skins[i][Globals.HAIR]
+		player.get_node("PlayerVisual").shoes_tex_id = Globals.player_skins[i][Globals.SHOES]
+		
 		player.player_visual.apply_textures()
 
 var knocked_players := []
