@@ -90,6 +90,9 @@ func _ready() -> void:
 func _on_item_grabber_body_entered(body: Node) -> void:
 	if item_cooldown > 0.0:
 		return
+	
+	if item_in_hand != null:
+		return
 
 	if body is IItem:
 		if body.has_owner:
