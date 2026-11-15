@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://blbqbxa574jv6"]
+
+[ext_resource type="SpriteFrames" uid="uid://dlf84qfi3yu7v" path="res://assets/sprites/item_swap.tres" id="1_8cxav"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=765543250]
+sprite_frames = ExtResource("1_8cxav")
+frame_progress = 0.16119456
