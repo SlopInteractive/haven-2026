@@ -18,20 +18,26 @@ func _ready() -> void:
 		
 		player.player_visual.apply_textures()
 
-var knocked_players := []
+var knocked_players := {}
+var game_over := false
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/test/character_select.tscn")
 	
+	if game_over:
+		return
+	
 	# Check for any player that has fallen below the screen and reset their position
 	for player in get_children():
 		if player is PlayerController:
 			if player.global_position.y > 1000:
-				knocked_players.append(player.player_id)
+				knocked_players[player.player_id] = true
 	
-	if len(knocked_players) >= Globals.player_count - 1:
+	if len(knocked_players) >= Globals.player_count-1:
 		for player in get_children():
 			if player is PlayerController and player.player_id not in knocked_players:
 				print("Player win ", player.player_id)
+				Globals.player_wins[player.player_id] += 1
 				SignalBus.player_win.emit(player.player_id)
+				game_over = true

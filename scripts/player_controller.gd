@@ -60,7 +60,8 @@ func equip_item(item: IItem) -> void:
 	
 	item.position = Vector2.ZERO
 	item.rotation = 0.0
-	
+
+	SignalBus.audio_play.emit("equip")
 	item_in_hand = item
 	item_in_hand.reparent($"PlayerVisual/ItemHold", false)
 	item_in_hand.on_pickup(self)
@@ -167,6 +168,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		if bounce_timer <= 0.0:
 			player_visual.trigger_midair_animation()
 			state.apply_central_impulse(pending_normal * bounce_strength)
+			SignalBus.audio_play.emit("boing")
 			bounce_timer = -1.0
 			has_jump = true
 

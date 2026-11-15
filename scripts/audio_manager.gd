@@ -8,5 +8,5 @@ func _ready() -> void:
 	SignalBus.connect("audio_play", _play_sound)
 	
 func _play_sound(track : String):
-	player.stream = load("res://assets/sounds/" + track + ".mp3")
+	player.stream = load("res://assets/" + track + ".mp3")
 	player.play();

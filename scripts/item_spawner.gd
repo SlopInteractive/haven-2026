@@ -15,7 +15,6 @@ func _ready() -> void:
 	timer.timeout.connect(_spawn_item)
 	timer.autostart = true
 	add_child.call_deferred(timer)
-	_spawn_item()
 
 func _spawn_item() -> void:
 	var item := item_scene.instantiate() as FloatingItem

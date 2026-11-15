@@ -31,6 +31,7 @@ func detonate() -> void:
 	freeze = true
 	boom_anim.show()
 	boom_anim.play("default")
+	SignalBus.audio_play.emit("boom")
 	explode()
 
 func explode():

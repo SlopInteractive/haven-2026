@@ -9,4 +9,7 @@ func _ready() -> void:
 func start_game(): 
 	for i in range(1,5):
 		Globals.player_skins[i] =  get_node("Player" + str(i) +"/PlayerCustomization").indexes
-	get_tree().change_scene_to_file("res://scenes/maps/arena1.tscn")
+	
+	var rand := randi_range(1, 8)
+	get_tree().change_scene_to_file("res://scenes/maps/arena" + str(rand) + ".tscn")
+	
