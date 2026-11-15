@@ -30,8 +30,8 @@ func _process(delta: float) -> void:
 			if player.global_position.y > 1000:
 				knocked_players.append(player.player_id)
 	
-	if len(knocked_players) == Globals.player_count - 1:
+	if len(knocked_players) >= Globals.player_count - 1:
 		for player in get_children():
 			if player is PlayerController and player.player_id not in knocked_players:
 				print("Player win ", player.player_id)
-				SignalBus.emit_signal("player_win", player.player_id)
+				SignalBus.player_win.emit(player.player_id)
