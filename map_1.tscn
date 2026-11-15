@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://i5x83o7uis5w"]
+
+[ext_resource type="Texture2D" uid="uid://ty7imnu84tmb" path="res://assets/sprites/background.tres" id="1_lolil"]
+[ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="1_thia8"]
+
+[node name="MapPrefab" type="Node2D" unique_id=2026228290]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1155088048]
+texture = ExtResource("1_lolil")
+
+[node name="Platform" parent="." unique_id=489886513 instance=ExtResource("1_thia8")]
+position = Vector2(-651, 84)
+scale = Vector2(0.64621717, 1)
+
+[node name="Platform3" parent="." unique_id=1169538289 instance=ExtResource("1_thia8")]
+position = Vector2(651, 84)
+scale = Vector2(0.64621717, 1)
+
+[node name="Platform2" parent="." unique_id=1649604942 instance=ExtResource("1_thia8")]
+position = Vector2(0, 385)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1771418687]
+zoom = Vector2(0.6, 0.6)
+
+[node name="PlayerSpawner" type="Marker2D" parent="." unique_id=1937031492]
+position = Vector2(-651, -261)
+
+[node name="PlayerSpawner2" type="Marker2D" parent="." unique_id=1871148555]
+position = Vector2(651, -261)
+
+[node name="PlayerSpawner3" type="Marker2D" parent="." unique_id=987694001]
+position = Vector2(-159, 65)
+
+[node name="PlayerSpawner4" type="Marker2D" parent="." unique_id=646415356]
+position = Vector2(150, 65)
