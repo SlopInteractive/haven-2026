@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://3d3yh2wiitwj"]
+
+[ext_resource type="Script" uid="uid://drm7fe8eqeaam" path="res://scenes/test/game_manager.gd" id="1_p016g"]
+[ext_resource type="Texture2D" uid="uid://ty7imnu84tmb" path="res://assets/sprites/background.tres" id="2_qc3nl"]
+[ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="3_pmtkx"]
+
+[node name="ArenaUITest" type="Node2D" unique_id=1517936273]
+script = ExtResource("1_p016g")
+
+[node name="player1_marker" type="Marker2D" parent="." unique_id=956780563]
+position = Vector2(340, 300)
+
+[node name="player2_marker" type="Marker2D" parent="." unique_id=930391116]
+position = Vector2(740, 500)
+
+[node name="player3_marker" type="Marker2D" parent="." unique_id=1822999920]
+position = Vector2(1180, 500)
+
+[node name="player4_marker" type="Marker2D" parent="." unique_id=244644233]
+position = Vector2(1580, 300)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=193547368]
+texture = ExtResource("2_qc3nl")
+centered = false
+
+[node name="Platform3" parent="." unique_id=489886513 instance=ExtResource("3_pmtkx")]
+position = Vector2(340, 636)
+scale = Vector2(1.0000019, 1)
+
+[node name="Platform4" parent="." unique_id=487166686 instance=ExtResource("3_pmtkx")]
+position = Vector2(960, 836)
+scale = Vector2(1.0000019, 1)
+
+[node name="Platform7" parent="." unique_id=1701519287 instance=ExtResource("3_pmtkx")]
+position = Vector2(1580, 636)
+scale = Vector2(1.0000019, 1)
