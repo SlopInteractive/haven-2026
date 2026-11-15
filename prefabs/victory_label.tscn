@@ -30,16 +30,29 @@ label_settings = SubResource("LabelSettings_4asb3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button2" type="Button" parent="." unique_id=916431363]
+visible = false
+z_index = 10
+z_as_relative = false
+layout_mode = 0
+offset_left = 453.0
+offset_top = 684.0
+offset_right = 982.0
+offset_bottom = 794.0
+theme = ExtResource("3_lkvsf")
+text = "Quit to menu"
+
 [node name="Button" type="Button" parent="." unique_id=8589193]
 visible = false
 z_index = 10
 z_as_relative = false
 layout_mode = 0
-offset_left = 734.5
-offset_top = 700.0
-offset_right = 1185.5
-offset_bottom = 810.0
+offset_left = 1007.0
+offset_top = 688.0
+offset_right = 1458.0
+offset_bottom = 798.0
 theme = ExtResource("3_lkvsf")
 text = "Play again"
 
+[connection signal="pressed" from="Button2" to="." method="_quit_to_menu"]
 [connection signal="pressed" from="Button" to="." method="_replay"]
