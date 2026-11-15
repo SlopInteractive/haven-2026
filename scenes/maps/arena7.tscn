@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ty7imnu84tmb" path="res://assets/sprites/background.tres" id="2_rwuge"]
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="3_uh6f6"]
 [ext_resource type="PackedScene" uid="uid://cn8ja7xm01eh1" path="res://prefabs/postfx.tscn" id="4_rwuge"]
+[ext_resource type="PackedScene" uid="uid://dxw6qrmfwn7ym" path="res://prefabs/victory_label.tscn" id="5_uh6f6"]
 
 [node name="ArenaUITest" type="Node2D" unique_id=1517936273]
 script = ExtResource("1_22imn")
@@ -28,14 +29,19 @@ centered = false
 position = Vector2(340, 636)
 rotation = 0.2617994
 scale = Vector2(1.0000019, 1)
+script = null
 
 [node name="Platform4" parent="." unique_id=487166686 instance=ExtResource("3_uh6f6")]
 position = Vector2(960, 910)
 scale = Vector2(1.0000019, 1)
+script = null
 
 [node name="Platform7" parent="." unique_id=1701519287 instance=ExtResource("3_uh6f6")]
 position = Vector2(1580, 636)
 rotation = -0.2617994
 scale = Vector2(1.0000019, 1)
+script = null
 
 [node name="CanvasLayer" parent="." unique_id=132188769 instance=ExtResource("4_rwuge")]
+
+[node name="VictoryLabel" parent="." unique_id=946134920 instance=ExtResource("5_uh6f6")]
