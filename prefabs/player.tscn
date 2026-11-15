@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://mecpisjf1ohd"]
 
 [ext_resource type="Script" uid="uid://basudrj7khkap" path="res://scripts/player_controller.gd" id="1_60koi"]
-[ext_resource type="Texture2D" uid="uid://uelvhslkv8pv" path="res://icon.svg" id="2_n0lew"]
 [ext_resource type="Script" uid="uid://hcwnmm4jkusk" path="res://scripts/player_visual.gd" id="3_rgeog"]
 [ext_resource type="Texture2D" uid="uid://cronclvu8q17x" path="res://assets/sprites/arms/arm_01.tres" id="4_opo22"]
 [ext_resource type="Texture2D" uid="uid://mo2ch6jofjmy" path="res://assets/sprites/Leg.png" id="5_8rb0w"]
@@ -297,15 +296,13 @@ states/walk/position = Vector2(533.83997, 233.6)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_sd3sa"), "in_air", "walk", SubResource("AnimationNodeStateMachineTransition_rgeog"), "walk", "in_air", SubResource("AnimationNodeStateMachineTransition_opo22"), "walk", "grab", SubResource("AnimationNodeStateMachineTransition_m2qjg"), "grab", "walk", SubResource("AnimationNodeStateMachineTransition_llb5v"), "in_air", "grab", SubResource("AnimationNodeStateMachineTransition_lulei"), "grab", "idle", SubResource("AnimationNodeStateMachineTransition_8rb0w"), "idle", "grab", SubResource("AnimationNodeStateMachineTransition_edtk3")]
 graph_offset = Vector2(156.24144, 46)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my6qp"]
+size = Vector2(157.5, 50)
+
 [node name="Player" type="RigidBody2D" unique_id=826111072]
 collision_layer = 3
 lock_rotation = true
 script = ExtResource("1_60koi")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255464532]
-visible = false
-texture = ExtResource("2_n0lew")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735688710]
 position = Vector2(-3.9999983, 35.65695)
@@ -383,3 +380,13 @@ anim_player = NodePath("../Legs")
 
 [node name="ItemHold" type="Node2D" parent="PlayerVisual" unique_id=61227497]
 position = Vector2(37, 6)
+
+[node name="ItemGrab" type="Area2D" parent="." unique_id=1528494277]
+position = Vector2(38, 6)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemGrab" unique_id=1905140053]
+position = Vector2(-42.25, -2)
+scale = Vector2(1.0398358, 1.0951542)
+shape = SubResource("RectangleShape2D_my6qp")

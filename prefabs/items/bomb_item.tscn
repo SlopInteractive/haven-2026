@@ -90,12 +90,13 @@ radius = 387.3306
 size = Vector2(31, 32)
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=813204926]
-collision_layer = 6
-collision_mask = 5
+collision_layer = 14
+collision_mask = 13
 script = ExtResource("1_8pahb")
 explosion_force = 7000.0
 
 [node name="Label" type="Label" parent="." unique_id=1644890289]
+visible = false
 offset_left = -37.0
 offset_top = -85.0
 offset_right = 34.0

@@ -19,6 +19,7 @@ class_name PlayerController
 @export var external_force_decay := 700.0
 
 @onready var player_visual: PlayerVisual = $"PlayerVisual"
+@onready var item_grabber: Area2D = $"ItemGrab"
 
 var bounce_timer := -1.0
 var pending_normal := Vector2.UP
@@ -31,23 +32,29 @@ var dash_timer := 0.0
 
 var has_jump := false
 
+var item_cooldown := 0.0
 
 func equip_item(item: IItem) -> void:
+	if item_cooldown > 0.0:
+		return
+	
 	item.position = Vector2.ZERO
 	item.rotation = 0.0
 	
 	item_in_hand = item
 	item_in_hand.reparent($"PlayerVisual/ItemHold", false)
+	item_in_hand.on_pickup(self)
 	player_visual.start_holding()
-	
-func unequip_item() -> void:
+
+func unequip_item() -> void:	
 	if item_in_hand == null:
 		return
+
+	item_cooldown = 3.0
 	
 	item_in_hand.reparent(get_tree().root, true)
 	item_in_hand = null
 	player_visual.stop_holding()
-
 
 func _ready() -> void:
 	contact_monitor = true
@@ -57,6 +64,23 @@ func _ready() -> void:
 		var it: IItem = starting_item.instantiate()
 		get_tree().root.add_child.call_deferred(it)
 		equip_item.call_deferred(it)
+
+	item_grabber.body_entered.connect(Callable(self, "_on_item_grabber_body_entered"))
+
+func _on_item_grabber_body_entered(body: Node) -> void:
+	if item_cooldown > 0.0:
+		return
+
+	if body is IItem:
+		if body.has_owner:
+			return
+		equip_item(body)
+	elif body is FloatingItem:
+		var it: IItem = body.get_child(0) as IItem
+		if it.has_owner:
+			return
+		equip_item(it)
+		body.queue_free()
 
 var external_velocity := Vector2.ZERO
 
@@ -70,6 +94,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_action_strength(_translate_action("right")) - Input.get_action_strength(_translate_action("left"))
 
 	dash_timer = max(dash_timer - delta, 0.0)
+	item_cooldown = max(item_cooldown - delta, 0.0)
 
 	if Input.is_action_just_pressed(_translate_action("interact")):
 		if item_in_hand:

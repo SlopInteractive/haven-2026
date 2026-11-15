@@ -13,11 +13,12 @@ extends IItem
 
 # secs
 const TIME := 10
+var activated := false
 
 var time_left := 0.0
 
 func _ready() -> void:
-	on_pickup(null)
+	freeze = true
 	boom_anim.animation_finished.connect(_on_boom_anim_animation_finished)
 
 func _on_boom_anim_animation_finished():
@@ -43,8 +44,6 @@ func explode():
 
 	var space := get_world_2d().direct_space_state
 	var results := space.intersect_shape(query, 32)
-
-	print("Detected bodies: ", results.size())
 
 	for result in results:
 		var body := result.collider as PlayerController
@@ -79,12 +78,19 @@ func _process(delta: float):
 
 func on_pickup(player: PlayerController) -> void:
 	freeze = true
+	if activated:
+		return
+	activated = true
+	self.has_owner = true
+	
+	label.show()
 	time_left = TIME
 
 func on_interact(player: PlayerController) -> void:
 	# deparent from player
 	player.unequip_item()
 	freeze = false
+	self.has_owner = false
 	
 	var direction := Vector2.LEFT if player.facing_left else Vector2.RIGHT
 	
@@ -93,5 +99,4 @@ func on_interact(player: PlayerController) -> void:
 		direction * throw_force +
 		Vector2.UP * throw_upward_force
 	)
-		
 	

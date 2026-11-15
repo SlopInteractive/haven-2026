@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://mecpisjf1ohd" path="res://prefabs/player.tscn" id="2_x7yfq"]
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="2_xd32e"]
 [ext_resource type="PackedScene" uid="uid://civdm0v7cw212" path="res://prefabs/items/bomb_item.tscn" id="3_f0kn0"]
+[ext_resource type="Script" uid="uid://c4i7pjltlvtmc" path="res://scripts/items/floating_item.gd" id="4_f0kn0"]
 
 [node name="TestArena" type="Node2D" unique_id=670349092]
 
@@ -21,17 +22,35 @@ zoom = Vector2(0.48, 0.48)
 position = Vector2(1, 0)
 
 [node name="Player" parent="." unique_id=826111072 instance=ExtResource("2_x7yfq")]
-position = Vector2(391, 235)
+position = Vector2(1639, 152)
 max_contacts_reported = 4
 move_speed = 600.0
+acceleration = 100.0
 bounce_strength = 800.0
 bounce_delay = 0.0
-starting_item = ExtResource("3_f0kn0")
+player_id = 1
+external_force_decay = 700.0
+DASH_COOLDOWN = 3.0
 
 [node name="Player2" parent="." unique_id=1241401012 instance=ExtResource("2_x7yfq")]
-position = Vector2(1621, 372)
+position = Vector2(368, 359)
 max_contacts_reported = 4
 move_speed = 600.0
+acceleration = 100.0
 bounce_strength = 800.0
 bounce_delay = 0.0
 player_id = 2
+external_force_decay = 700.0
+DASH_COOLDOWN = 3.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=131809457]
+position = Vector2(949, 164)
+script = ExtResource("4_f0kn0")
+movement_radius = 500.0
+item_scene = ExtResource("3_f0kn0")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=1619942422]
+position = Vector2(949, 164)
+script = ExtResource("4_f0kn0")
+movement_radius = 500.0
+item_scene = ExtResource("3_f0kn0")
