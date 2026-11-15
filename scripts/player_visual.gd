@@ -65,6 +65,7 @@ func start_holding():
 
 func stop_holding():
 	is_holding = false
+	play_state(arm_playback, &"idle")
 
 func update_facing(direction: float):
 	self.scale.x = -1 if direction < 0 else 1

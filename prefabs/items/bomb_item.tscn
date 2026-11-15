@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://civdm0v7cw212"]
+
+[ext_resource type="Script" uid="uid://c8gjb0gjgaqni" path="res://scripts/items/bomb_item.gd" id="1_8pahb"]
+[ext_resource type="Texture2D" uid="uid://bpkclui5ahhi" path="res://assets/sprites/Bomb.png" id="2_a043o"]
+[ext_resource type="FontFile" uid="uid://b1kaed42jl2k5" path="res://assets/Pixelartfont-Regular.otf" id="2_ttwa0"]
+[ext_resource type="Texture2D" uid="uid://hialjcefhh5w" path="res://assets/sprites/Boom.png" id="4_a043o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_my6qp"]
+font = ExtResource("2_ttwa0")
+font_size = 48
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj021"]
+atlas = ExtResource("4_a043o")
+region = Rect2(0, 0, 100, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i17f"]
+atlas = ExtResource("4_a043o")
+region = Rect2(100, 0, 100, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgmmg"]
+atlas = ExtResource("4_a043o")
+region = Rect2(200, 0, 100, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_21vm0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj021")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgmmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj021")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgmmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj021")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgmmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj021")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgmmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj021")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgmmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj021")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgmmg")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_my6qp"]
+radius = 177.0706
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my6qp"]
+size = Vector2(31, 32)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=813204926]
+collision_layer = 2
+script = ExtResource("1_8pahb")
+
+[node name="Label" type="Label" parent="." unique_id=1644890289]
+offset_left = -37.0
+offset_top = -85.0
+offset_right = 34.0
+offset_bottom = -26.0
+text = "10"
+label_settings = SubResource("LabelSettings_my6qp")
+horizontal_alignment = 1
+
+[node name="HoldItem" type="Sprite2D" parent="." unique_id=1475102029]
+texture = ExtResource("2_a043o")
+
+[node name="BoomAnim" type="AnimatedSprite2D" parent="." unique_id=845508081]
+visible = false
+position = Vector2(1, 0)
+scale = Vector2(4.1200013, 4.1200013)
+sprite_frames = SubResource("SpriteFrames_21vm0")
+frame_progress = 0.9252746
+
+[node name="ExplosionShape" type="CollisionShape2D" parent="." unique_id=394577220]
+shape = SubResource("CircleShape2D_my6qp")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=536390291]
+position = Vector2(-1, 3)
+shape = SubResource("RectangleShape2D_my6qp")
