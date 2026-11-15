@@ -1,4 +1,4 @@
-﻿
+
 @tool
 extends SoftBody2D
 
@@ -7,12 +7,10 @@ extends SoftBody2D
 @export var anchor_zone: Area2D
 
 const COLORS: Array[Variant] = [
-	Color(1, 0, 0),
-	Color(0, 1, 0),
-	Color(0, 0, 1),
-	Color(0.5882353, 0.3254902, 0.93333334),
-	Color(0.6313726, 0.19215687, 0.5529412),
-	Color(0.77254903, 0.12156863, 0.18431373),
+	Color("9cdb43"),
+	Color("fa6a0a"),
+	Color("20d6c7"),
+	Color("bc4a9b")
 ]
 
 func _ready() -> void:
