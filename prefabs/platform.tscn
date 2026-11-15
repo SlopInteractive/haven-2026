@@ -348,7 +348,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-1" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=887098329]
 position = Vector2(48.646667, 52.96392)
-rotation = 0.6920358
+rotation = 0.69203585
 scale = Vector2(1.0000008, 1.000001)
 rest = Transform2D(0.7699491, 0.6381054, -0.6381054, 0.7699491, 48.646675, 52.963917)
 auto_calculate_length_and_angle = false
@@ -510,7 +510,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-13" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=769280467]
 position = Vector2(452.0748, 106.0527)
 rotation = 2.7063437
-scale = Vector2(1.0000002, 1.000001)
+scale = Vector2(1.0000002, 1.0000011)
 rest = Transform2D(-0.9067654, 0.42163554, -0.42163554, -0.9067654, 452.0748, 106.05269)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -563,7 +563,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1588018986]
 position = Vector2(591.06854, 38.057587)
 rotation = 0.22119896
-scale = Vector2(1, 1.000001)
+scale = Vector2(1, 1.0000011)
 rest = Transform2D(0.9756351, 0.2193995, -0.2193995, 0.9756351, 591.06854, 38.057583)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -684,7 +684,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-26" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=1878675371]
 position = Vector2(673.04865, 146.98634)
 rotation = 1.540454
-scale = Vector2(1.0000004, 1.0000001)
+scale = Vector2(1.0000005, 1.0000001)
 rest = Transform2D(0.030337641, 0.99953973, -0.99953973, 0.030337641, 673.04865, 146.98634)
 auto_calculate_length_and_angle = false
 length = 100.0
@@ -712,7 +712,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-28" type="Bone2D" parent="SoftBody2D/Skeleton2D" unique_id=191309025]
 position = Vector2(674.98975, 210.9407)
 rotation = -1.6011386
-scale = Vector2(1.0000004, 1.0000001)
+scale = Vector2(1.0000005, 1.0000001)
 rest = Transform2D(-0.03033761, -0.99953973, 0.99953973, -0.03033761, 674.98975, 210.94069)
 auto_calculate_length_and_angle = false
 length = 100.0
