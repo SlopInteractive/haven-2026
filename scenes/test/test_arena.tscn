@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://mecpisjf1ohd" path="res://prefabs/player.tscn" id="2_x7yfq"]
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="2_xd32e"]
 [ext_resource type="PackedScene" uid="uid://civdm0v7cw212" path="res://prefabs/items/bomb_item.tscn" id="3_f0kn0"]
-[ext_resource type="PackedScene" uid="uid://dfd4mw1oao4" path="res://prefabs/player_textured.tscn" id="3_xd32e"]
 
 [node name="TestArena" type="Node2D" unique_id=670349092]
 
@@ -36,6 +35,3 @@ move_speed = 600.0
 bounce_strength = 800.0
 bounce_delay = 0.0
 player_id = 2
-
-[node name="Player3" parent="." unique_id=1919550259 instance=ExtResource("3_xd32e")]
-position = Vector2(788, 297)

@@ -84,7 +84,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_my6qp"]
-radius = 177.0706
+radius = 387.3306
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_my6qp"]
 size = Vector2(31, 32)
@@ -108,7 +108,7 @@ texture = ExtResource("2_a043o")
 [node name="BoomAnim" type="AnimatedSprite2D" parent="." unique_id=845508081]
 visible = false
 position = Vector2(1, 0)
-scale = Vector2(4.1200013, 4.1200013)
+scale = Vector2(8.559999, 8.559999)
 sprite_frames = SubResource("SpriteFrames_21vm0")
 frame_progress = 0.9252746
 
