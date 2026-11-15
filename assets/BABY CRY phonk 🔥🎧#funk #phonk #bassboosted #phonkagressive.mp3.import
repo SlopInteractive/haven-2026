@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2vhibf5hem4l"
+path="res://.godot/imported/BABY CRY phonk 🔥🎧#funk #phonk #bassboosted #phonkagressive.mp3-8a8692ceaca3d4067fcb2f4d9a9e3a96.mp3str"
+
+[deps]
+
+source_file="res://assets/BABY CRY phonk 🔥🎧#funk #phonk #bassboosted #phonkagressive.mp3"
+dest_files=["res://.godot/imported/BABY CRY phonk 🔥🎧#funk #phonk #bassboosted #phonkagressive.mp3-8a8692ceaca3d4067fcb2f4d9a9e3a96.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
