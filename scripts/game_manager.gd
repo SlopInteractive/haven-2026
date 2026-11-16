@@ -21,7 +21,7 @@ func _ready() -> void:
 var knocked_players := {}
 var game_over := false
 
-func _process(delta: float) -> void:
+func _process(delta : float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/test/character_select.tscn")
 	

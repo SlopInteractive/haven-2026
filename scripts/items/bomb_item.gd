@@ -68,6 +68,8 @@ func explode():
 		body.apply_external_force(impulse)
 
 func _process(delta: float):
+	if !has_owner and !activated:
+		handle_duration(delta)
 	if time_left > 0.0:
 		time_left -= delta
 		
@@ -77,7 +79,7 @@ func _process(delta: float):
 		if time_left <= 0.0:
 			detonate()
 
-func on_pickup(player: PlayerController) -> void:
+func on_pickup(_player: PlayerController) -> void:
 	freeze = true
 	if activated:
 		return
@@ -91,7 +93,6 @@ func on_interact(player: PlayerController) -> void:
 	# deparent from player
 	player.unequip_item()
 	freeze = false
-	self.has_owner = false
 	
 	var direction := Vector2.LEFT if player.facing_left else Vector2.RIGHT
 	

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dxw6qrmfwn7ym" path="res://prefabs/victory_label.tscn" id="5_ftykd"]
 [ext_resource type="PackedScene" uid="uid://bbdsg840eao7y" path="res://scenes/maps/item_spawner.tscn" id="6_nyy1u"]
 
-[node name="ArenaUITest" type="Node2D" unique_id=1517936273]
+[node name="ArenaUITest2" type="Node2D" unique_id=1517936273]
 script = ExtResource("1_jnfdu")
 
 [node name="player1_marker" type="Marker2D" parent="." unique_id=956780563]

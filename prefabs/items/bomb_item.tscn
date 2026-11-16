@@ -98,11 +98,11 @@ throw_force = 1000.0
 throw_upward_force = 250.0
 
 [node name="Label" type="Label" parent="." unique_id=1644890289]
-visible = false
 offset_left = -37.0
 offset_top = -85.0
 offset_right = 34.0
 offset_bottom = -26.0
+rotation = 0.017453292
 text = "10"
 label_settings = SubResource("LabelSettings_my6qp")
 horizontal_alignment = 1

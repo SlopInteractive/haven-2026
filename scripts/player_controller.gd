@@ -5,6 +5,7 @@ class_name PlayerController
 @export_group("Movement")
 @export var move_speed := 300.0
 @export var acceleration := 100.0
+@export var double_jump := 700
 
 @export_group("Bounce")
 @export var bounce_strength := 600.0
@@ -53,8 +54,11 @@ func attack() -> void:
 			var direction := (body.global_position - global_position).normalized()
 			# print(direction)
 			body.apply_external_force(direction * attack_force)
+			attack_cooldown = 0.5
 
 func equip_item(item: IItem) -> void:
+	if item.has_owner:
+		return
 	if item_cooldown > 0.0:
 		return
 	
@@ -63,7 +67,7 @@ func equip_item(item: IItem) -> void:
 
 	SignalBus.audio_play.emit("equip")
 	item_in_hand = item
-	item_in_hand.reparent($"PlayerVisual/ItemHold", false)
+	item_in_hand.reparent.call_deferred($"PlayerVisual/ItemHold", false)
 	item_in_hand.on_pickup(self)
 	player_visual.start_holding()
 
@@ -138,11 +142,11 @@ func _physics_process(delta: float) -> void:
 			if direction == 0:
 				dash_direction = Vector2.LEFT if facing_left else Vector2.RIGHT
 				
-			apply_external_force(dash_direction * 1000.0)
+			apply_external_force(dash_direction * 800.0)
 
 	if Input.is_action_just_pressed(_translate_action("up")):
 		if has_jump:
-			apply_central_impulse(Vector2.UP * 700.0)
+			linear_velocity.y = -double_jump
 			has_jump = false
 
 	if direction != 0:

@@ -1,4 +1,4 @@
-﻿extends IItem
+extends IItem
 
 @export_group("Throw")
 @export var throw_force: float = 1200.0
@@ -11,7 +11,11 @@ func _ready() -> void:
 	freeze = true
 
 func _process(delta: float) -> void:
+	handle_duration(delta)
 	timer = max(timer - delta, 0.0)
+
+func on_pickup(player: PlayerController) -> void:
+	self.has_owner = true
 
 func on_interact(player: PlayerController) -> void:
 	# deparent from player

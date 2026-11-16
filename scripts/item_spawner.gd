@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var item_scene: PackedScene
-@export var spawn_interval: float = 15.0
+@export var spawn_interval: float = 7.0
 
 const ITEMS: Array[Variant] = [
 	"res://prefabs/items/bomb_item.tscn",

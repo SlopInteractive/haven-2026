@@ -1,4 +1,4 @@
-﻿extends IItem
+extends IItem
 
 @onready var tex: Sprite2D = $"HoldItem"
 @onready var boom_anim: AnimatedSprite2D = $"BoomAnim"
@@ -64,17 +64,19 @@ func explode():
 
 func _process(delta: float):
 	timer = max(timer - delta, 0.0)
+	if !has_owner:
+		item_duration = max(item_duration - delta, 0.0)
 	pass
 
 func on_pickup(player: PlayerController) -> void:
 	freeze = true
 	self.has_owner = true
+	
 
 func on_interact(player: PlayerController) -> void:
 	# deparent from player
 	player.unequip_item()
 	freeze = false
-	self.has_owner = false
 
 	var direction := Vector2.LEFT if player.facing_left else Vector2.RIGHT
 

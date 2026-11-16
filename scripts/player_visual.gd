@@ -83,5 +83,18 @@ func update_facing(direction: float):
 	# $"Head2/Hair".flip_h = direction < 0
 	# $"Head2/Eyes".flip_h = direction < 0
 	# 
-	
 	self.scale.x = -1 if direction < 0 else 1
+	if direction < 0:
+		$"../ItemGrab/Left".disabled = false
+		$"../AttackArea/Left".disabled = false
+		$"../Hurtbox/Left".disabled = false
+		$"../ItemGrab/Right".disabled = true
+		$"../AttackArea/Right".disabled = true
+		$"../Hurtbox/Right".disabled = true
+	else:
+		$"../ItemGrab/Left".disabled = true
+		$"../AttackArea/Left".disabled = true
+		$"../Hurtbox/Left".disabled = true
+		$"../ItemGrab/Right".disabled = false
+		$"../AttackArea/Right".disabled = false
+		$"../Hurtbox/Right".disabled = false
