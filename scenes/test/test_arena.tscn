@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://mecpisjf1ohd" path="res://prefabs/player.tscn" id="2_x7yfq"]
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="2_xd32e"]
-[ext_resource type="PackedScene" uid="uid://civdm0v7cw212" path="res://prefabs/items/bomb_item.tscn" id="3_f0kn0"]
+[ext_resource type="PackedScene" uid="uid://xwamwl8b218g" path="res://prefabs/items/stick.tscn" id="4_1cmvy"]
 [ext_resource type="Script" uid="uid://c4i7pjltlvtmc" path="res://scripts/items/floating_item.gd" id="4_f0kn0"]
 [ext_resource type="PackedScene" uid="uid://dysqfav7lv7lx" path="res://prefabs/items/grenade.tscn" id="5_1cmvy"]
 
@@ -35,26 +35,18 @@ position = Vector2(1, 0)
 
 [node name="Player" parent="Game" unique_id=826111072 instance=ExtResource("2_x7yfq")]
 position = Vector2(1639, 152)
-collision_layer = 3
 max_contacts_reported = 4
-move_speed = 600.0
-bounce_strength = 700.0
-bounce_delay = 0.0
 
 [node name="Player2" parent="Game" unique_id=1241401012 instance=ExtResource("2_x7yfq")]
 position = Vector2(307, 307)
-collision_layer = 3
 max_contacts_reported = 4
-move_speed = 600.0
-bounce_strength = 700.0
-bounce_delay = 0.0
 player_id = 2
 
 [node name="Node2D" type="Node2D" parent="Game" unique_id=131809457]
 position = Vector2(1159, 121)
 script = ExtResource("4_f0kn0")
 movement_radius = 500.0
-item_scene = ExtResource("3_f0kn0")
+item_scene = ExtResource("4_1cmvy")
 
 [node name="Node2D2" type="Node2D" parent="Game" unique_id=1619942422]
 position = Vector2(949, 164)

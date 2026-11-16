@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://brpvolci1fnnq" path="res://prefabs/platform.tscn" id="3_pmtkx"]
 [ext_resource type="PackedScene" uid="uid://cn8ja7xm01eh1" path="res://prefabs/postfx.tscn" id="4_qc3nl"]
 [ext_resource type="PackedScene" uid="uid://dxw6qrmfwn7ym" path="res://prefabs/victory_label.tscn" id="5_pmtkx"]
+[ext_resource type="PackedScene" uid="uid://bbdsg840eao7y" path="res://scenes/maps/item_spawner.tscn" id="6_6rf1l"]
 
 [node name="ArenaUITest" type="Node2D" unique_id=1517936273]
 script = ExtResource("1_p016g")
@@ -28,18 +29,18 @@ centered = false
 [node name="Platform3" parent="." unique_id=489886513 instance=ExtResource("3_pmtkx")]
 position = Vector2(340, 636)
 scale = Vector2(1.0000019, 1)
-script = null
 
 [node name="Platform4" parent="." unique_id=487166686 instance=ExtResource("3_pmtkx")]
 position = Vector2(960, 836)
 scale = Vector2(1.0000019, 1)
-script = null
 
 [node name="Platform7" parent="." unique_id=1701519287 instance=ExtResource("3_pmtkx")]
 position = Vector2(1580, 636)
 scale = Vector2(1.0000019, 1)
-script = null
 
 [node name="CanvasLayer" parent="." unique_id=132188769 instance=ExtResource("4_qc3nl")]
 
 [node name="VictoryLabel" parent="." unique_id=946134920 instance=ExtResource("5_pmtkx")]
+
+[node name="ItemSpawner" parent="." unique_id=839238884 instance=ExtResource("6_6rf1l")]
+position = Vector2(946, 255)

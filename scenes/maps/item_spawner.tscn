@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bbdsg840eao7y"]
+
+[ext_resource type="Script" uid="uid://boil518tch1ka" path="res://scripts/item_spawner.gd" id="1_86diy"]
+[ext_resource type="PackedScene" uid="uid://c0wjoekreewvw" path="res://prefabs/items/FloatingItem.tscn" id="2_hwkqv"]
+
+[node name="ItemSpawner" type="Node2D" unique_id=839238884]
+script = ExtResource("1_86diy")
+item_scene = ExtResource("2_hwkqv")

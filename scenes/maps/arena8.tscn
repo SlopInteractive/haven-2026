@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://wihlej1loy6t" path="res://scripts/platform.gd" id="4_cg76d"]
 [ext_resource type="PackedScene" uid="uid://cn8ja7xm01eh1" path="res://prefabs/postfx.tscn" id="4_olgtu"]
 [ext_resource type="PackedScene" uid="uid://dxw6qrmfwn7ym" path="res://prefabs/victory_label.tscn" id="5_q5vwb"]
+[ext_resource type="PackedScene" uid="uid://bbdsg840eao7y" path="res://scenes/maps/item_spawner.tscn" id="7_cg76d"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x7yfq"]
 friction = 0.0
@@ -592,7 +593,7 @@ scale = Vector2(2.9599996, 1)
 [node name="SoftBody2D" type="Polygon2D" parent="Platform" unique_id=748807110 node_paths=PackedStringArray("anchor_zone")]
 position = Vector2(-285, -90)
 scale = Vector2(0.57459676, 0.50416666)
-color = Color(0.6117647, 0.85882354, 0.2627451, 1)
+color = Color(0.7372549, 0.2901961, 0.60784316, 1)
 texture = ExtResource("3_q48r8")
 skeleton = NodePath("Skeleton2D")
 polygon = PackedVector2Array(27, 1, 23, 2, 20, 2, 15, 6, 13, 6, 7, 13, 6, 13, 5, 16, 4, 16, 2, 23, 1, 23, 1, 27, 0, 27, 0, 213, 2, 217, 2, 220, 4, 222, 4, 224, 13, 233, 13, 234, 20, 237, 20, 238, 27, 239, 27, 240, 965, 240, 969, 238, 972, 238, 974, 236, 976, 236, 985, 227, 986, 227, 989, 220, 990, 220, 991, 213, 992, 213, 992, 27, 990, 23, 990, 20, 988, 18, 988, 16, 979, 7, 979, 6, 972, 3, 972, 2, 965, 1, 965, 0, 27, 0, 80.82904, 35, 40.41452, 35, 21.361961, 2, 23, 2, 27, 1, 27, 0, 101.0363, 0, 40.41452, 35, 20.20726, 70, 0, 70, 0, 27, 1, 27, 1, 23, 2, 23, 4, 16, 5, 16, 6, 13, 7, 13, 13, 6, 15, 6, 20, 2, 21.361961, 2, 101.0363, 70, 80.82904, 105, 40.41452, 105, 20.20726, 70, 40.41452, 35, 80.82904, 35, 40.41452, 105, 20.20726, 140, 0, 140, 0, 70, 20.20726, 70, 101.0363, 140, 80.82904, 175, 40.41452, 175, 20.20726, 140, 40.41452, 105, 80.82904, 105, 40.41452, 175, 20.20726, 210, 0, 210, 0, 140, 20.20726, 140, 101.0363, 210, 83.71579, 240, 37.52777, 240, 20.20726, 210, 40.41452, 175, 80.82904, 175, 37.52777, 240, 27, 240, 27, 239, 20, 238, 20, 237, 13, 234, 13, 233, 4, 224, 4, 222, 2, 220, 2, 217, 0, 213, 0, 210, 20.20726, 210, 202.07259, 35, 161.65807, 35, 141.4508, 0, 222.27985, 0, 161.65808, 35, 141.4508, 70, 101.03629, 70, 80.82903, 35, 101.03629, 0, 141.4508, 0, 222.27985, 70, 202.07259, 105, 161.65807, 105, 141.4508, 70, 161.65807, 35, 202.07259, 35, 161.65808, 105, 141.4508, 140, 101.03629, 140, 80.82903, 105, 101.03629, 70, 141.4508, 70, 222.27985, 140, 202.07259, 175, 161.65807, 175, 141.4508, 140, 161.65807, 105, 202.07259, 105, 161.65808, 175, 141.4508, 210, 101.03629, 210, 80.82903, 175, 101.03629, 140, 141.4508, 140, 222.27985, 210, 204.95934, 240, 158.77132, 240, 141.4508, 210, 161.65807, 175, 202.07259, 175, 158.77133, 240, 83.71578, 240, 101.03629, 210, 141.4508, 210, 323.31616, 35, 282.9016, 35, 262.69437, 0, 343.5234, 0, 282.9016, 35, 262.69437, 70, 222.27985, 70, 202.07259, 35, 222.27985, 0, 262.69437, 0, 343.5234, 70, 323.31616, 105, 282.9016, 105, 262.69437, 70, 282.9016, 35, 323.31616, 35, 282.9016, 105, 262.69437, 140, 222.27985, 140, 202.07259, 105, 222.27985, 70, 262.69437, 70, 343.5234, 140, 323.31616, 175, 282.9016, 175, 262.69437, 140, 282.9016, 105, 323.31616, 105, 282.9016, 175, 262.69437, 210, 222.27985, 210, 202.07259, 175, 222.27985, 140, 262.69437, 140, 343.5234, 210, 326.2029, 240, 280.01486, 240, 262.69437, 210, 282.9016, 175, 323.31616, 175, 280.01486, 240, 204.95934, 240, 222.27985, 210, 262.69437, 210, 444.5597, 35, 404.1452, 35, 383.93793, 0, 464.76697, 0, 404.14517, 35, 383.93793, 70, 343.52338, 70, 323.31613, 35, 343.52338, 0, 383.93793, 0, 464.76697, 70, 444.5597, 105, 404.1452, 105, 383.93793, 70, 404.1452, 35, 444.5597, 35, 404.14517, 105, 383.93793, 140, 343.52338, 140, 323.31613, 105, 343.52338, 70, 383.93793, 70, 464.76697, 140, 444.5597, 175, 404.1452, 175, 383.93793, 140, 404.1452, 105, 444.5597, 105, 404.14517, 175, 383.93793, 210, 343.52338, 210, 323.31613, 175, 343.52338, 140, 383.93793, 140, 464.76697, 210, 447.44644, 240, 401.25845, 240, 383.93793, 210, 404.1452, 175, 444.5597, 175, 401.25842, 240, 326.20288, 240, 343.52338, 210, 383.93793, 210, 565.8033, 35, 525.38873, 35, 505.1815, 0, 586.0105, 0, 525.38873, 35, 505.18146, 70, 464.76697, 70, 444.5597, 35, 464.76697, 0, 505.18146, 0, 586.0105, 70, 565.8033, 105, 525.38873, 105, 505.1815, 70, 525.38873, 35, 565.8033, 35, 525.38873, 105, 505.18146, 140, 464.76697, 140, 444.5597, 105, 464.76697, 70, 505.18146, 70, 586.0105, 140, 565.8033, 175, 525.38873, 175, 505.1815, 140, 525.38873, 105, 565.8033, 105, 525.38873, 175, 505.18146, 210, 464.76697, 210, 444.5597, 175, 464.76697, 140, 505.18146, 140, 586.0105, 210, 568.69, 240, 522.50195, 240, 505.1815, 210, 525.38873, 175, 565.8033, 175, 522.50195, 240, 447.44644, 240, 464.76697, 210, 505.18146, 210, 687.0468, 35, 646.63226, 35, 626.42505, 0, 707.254, 0, 646.6323, 35, 626.4251, 70, 586.01056, 70, 565.80334, 35, 586.01056, 0, 626.4251, 0, 707.254, 70, 687.0468, 105, 646.63226, 105, 626.42505, 70, 646.63226, 35, 687.0468, 35, 646.6323, 105, 626.4251, 140, 586.01056, 140, 565.80334, 105, 586.01056, 70, 626.4251, 70, 707.254, 140, 687.0468, 175, 646.63226, 175, 626.42505, 140, 646.63226, 105, 687.0468, 105, 646.6323, 175, 626.4251, 210, 586.01056, 210, 565.80334, 175, 586.01056, 140, 626.4251, 140, 707.254, 210, 689.93353, 240, 643.74554, 240, 626.42505, 210, 646.63226, 175, 687.0468, 175, 643.7456, 240, 568.69006, 240, 586.01056, 210, 626.4251, 210, 808.29034, 35, 767.8758, 35, 747.6686, 0, 828.49756, 0, 767.87585, 35, 747.6686, 70, 707.254, 70, 687.04675, 35, 707.254, 0, 747.6686, 0, 828.49756, 70, 808.29034, 105, 767.8758, 105, 747.6686, 70, 767.8758, 35, 808.29034, 35, 767.87585, 105, 747.6686, 140, 707.254, 140, 687.04675, 105, 707.254, 70, 747.6686, 70, 828.49756, 140, 808.29034, 175, 767.8758, 175, 747.6686, 140, 767.8758, 105, 808.29034, 105, 767.87585, 175, 747.6686, 210, 707.254, 210, 687.04675, 175, 707.254, 140, 747.6686, 140, 828.49756, 210, 811.17706, 240, 764.9891, 240, 747.6686, 210, 767.8758, 175, 808.29034, 175, 764.9891, 240, 689.93353, 240, 707.254, 210, 747.6686, 210, 929.5339, 35, 889.1193, 35, 868.9121, 0, 949.7411, 0, 889.1194, 35, 868.9122, 70, 828.4976, 70, 808.2904, 35, 828.4976, 0, 868.9122, 0, 949.7411, 70, 929.5339, 105, 889.1193, 105, 868.9121, 70, 889.1193, 35, 929.5339, 35, 889.1194, 105, 868.9122, 140, 828.4976, 140, 808.2904, 105, 828.4976, 70, 868.9122, 70, 949.7411, 140, 929.5339, 175, 889.1193, 175, 868.9121, 140, 889.1193, 105, 929.5339, 105, 889.1194, 175, 868.9122, 210, 828.4976, 210, 808.2904, 175, 828.4976, 140, 868.9122, 140, 949.7411, 210, 932.4206, 240, 886.2326, 240, 868.9121, 210, 889.1193, 175, 929.5339, 175, 886.23267, 240, 811.1771, 240, 828.4976, 210, 868.9122, 210, 965, 1, 972, 2, 972, 3, 979, 6, 979, 7, 988, 16, 988, 18, 990, 20, 990, 23, 992, 27, 992, 66.80557, 990.1557, 70, 949.74115, 70, 929.53394, 35, 949.74115, 0, 965, 0, 992, 73.19452, 990.15564, 70, 992, 66.80547, 992, 73.19442, 992, 136.80557, 990.1557, 140, 949.74115, 140, 929.53394, 105, 949.74115, 70, 990.1557, 70, 992, 143.19443, 992, 206.80557, 990.1557, 210, 949.74115, 210, 929.53394, 175, 949.74115, 140, 990.1557, 140, 992, 143.19452, 990.15564, 140, 992, 136.80548, 991.88776, 213, 991, 213, 990, 220, 989, 220, 986, 227, 985, 227, 976, 236, 974, 236, 972, 238, 969, 238, 965, 240, 932.42065, 240, 949.74115, 210, 990.1557, 210, 992, 213, 991.8877, 213, 990.15564, 210, 992, 206.80548)
@@ -656,8 +657,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-3" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=2103054384]
 position = Vector2(34.200302, 105.44116)
-rotation = 0.6982929
-scale = Vector2(0.99999976, 0.9999998)
+rotation = 0.69829273
+scale = Vector2(0.9999996, 0.9999995)
 rest = Transform2D(0.7659406, 0.6429113, -0.6429113, 0.7659406, 34.20031, 105.44115)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -696,8 +697,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-6" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1657643364]
 position = Vector2(64.25565, 204.80176)
-rotation = -2.3355925
-scale = Vector2(0.9999998, 1)
+rotation = -2.3355896
+scale = Vector2(0.99999976, 1)
 rest = Transform2D(-0.6923879, -0.7215255, 0.7215255, -0.6923879, 64.25566, 204.80173)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -711,7 +712,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-7" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1382367215]
 position = Vector2(195.17471, 21.842773)
 rotation = 0.28283295
-scale = Vector2(1, 0.9999996)
+scale = Vector2(1, 0.9999994)
 rest = Transform2D(0.9602687, 0.27907723, -0.27907723, 0.9602687, 195.17473, 21.84277)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -725,7 +726,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1747934954]
 position = Vector2(134.89676, 38.09668)
 rotation = 1.5658218
-scale = Vector2(0.9999994, 0.9999996)
+scale = Vector2(0.9999989, 0.9999992)
 rest = Transform2D(0.004974301, 0.9999876, -0.9999876, 0.004974301, 134.89677, 38.09674)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -738,8 +739,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-9" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1021822832]
 position = Vector2(195.69128, 72.20068)
-rotation = 2.6373954
-scale = Vector2(1, 0.9999996)
+rotation = 2.637397
+scale = Vector2(1, 0.9999994)
 rest = Transform2D(-0.87556255, 0.48310477, -0.48310477, -0.87556255, 195.69128, 72.200645)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -753,7 +754,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-10" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1279071424]
 position = Vector2(135.23236, 105.559814)
 rotation = 1.5728314
-scale = Vector2(0.9999994, 0.9999996)
+scale = Vector2(0.9999989, 0.9999992)
 rest = Transform2D(-0.0020350642, 0.9999979, -0.9999979, -0.0020350642, 135.23236, 105.55991)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -820,8 +821,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-15" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=663388054]
 position = Vector2(315.4718, 24.06958)
-rotation = 0.29889965
-scale = Vector2(0.99999994, 1)
+rotation = 0.29889956
+scale = Vector2(0.9999999, 0.9999997)
 rest = Transform2D(0.95566106, 0.29446897, -0.29446897, 0.95566106, 315.4718, 24.069504)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -835,7 +836,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-16" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1142987757]
 position = Vector2(255.76083, 39.45056)
 rotation = 1.5602239
-scale = Vector2(0.9999994, 0.9999996)
+scale = Vector2(0.9999989, 0.9999992)
 rest = Transform2D(0.01057267, 0.9999441, -0.9999441, 0.01057267, 255.76085, 39.45054)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -848,8 +849,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-17" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1365993450]
 position = Vector2(316.66095, 73.51282)
-rotation = 2.6489499
-scale = Vector2(1, 0.9999997)
+rotation = 2.648948
+scale = Vector2(0.9999999, 0.99999964)
 rest = Transform2D(-0.88108444, 0.472959, -0.472959, -0.88108444, 316.66098, 73.51289)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -930,8 +931,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-23" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=942619419]
 position = Vector2(432.37323, 28.97461)
-rotation = 0.35082376
-scale = Vector2(0.99999976, 0.9999995)
+rotation = 0.35082367
+scale = Vector2(0.99999976, 0.99999934)
 rest = Transform2D(0.9390899, 0.34367162, -0.34367162, 0.9390899, 432.37323, 28.974632)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -958,8 +959,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-25" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1202001224]
 position = Vector2(435.83322, 78.01196)
-rotation = 2.6852643
-scale = Vector2(0.9999997, 0.9999999)
+rotation = 2.6852624
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(-0.89767563, 0.4406568, -0.4406568, -0.89767563, 435.83322, 78.01198)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -973,7 +974,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-26" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=777894803]
 position = Vector2(377.64145, 106.577515)
 rotation = 1.5864006
-scale = Vector2(0.9999996, 0.9999997)
+scale = Vector2(0.9999991, 0.99999934)
 rest = Transform2D(-0.015603191, 0.9998783, -0.9998783, -0.015603191, 377.64148, 106.57756)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1014,8 +1015,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-29" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=965508708]
 position = Vector2(433.22195, 196.66797)
-rotation = -2.695619
-scale = Vector2(0.9999999, 0.9999995)
+rotation = -2.695621
+scale = Vector2(0.9999998, 0.99999934)
 rest = Transform2D(-0.902192, -0.43133467, 0.43133467, -0.902192, 433.222, 196.66803)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1042,8 +1043,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-31" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=293134265]
 position = Vector2(539.4982, 30.102295)
-rotation = 0.23716511
-scale = Vector2(1, 0.9999997)
+rotation = 0.2371672
+scale = Vector2(1, 0.9999995)
 rest = Transform2D(0.97200793, 0.23494811, -0.23494811, 0.97200793, 539.4982, 30.102266)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1097,7 +1098,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-35" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=591183972]
 position = Vector2(532.612, 134.76404)
 rotation = 2.608124
-scale = Vector2(1, 0.9999997)
+scale = Vector2(1, 0.99999964)
 rest = Transform2D(-0.8610484, 0.50852305, -0.50852305, -0.8610484, 532.612, 134.76408)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1151,8 +1152,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-39" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=753944523]
 position = Vector2(654.83453, 24.702637)
-rotation = 0.2489667
-scale = Vector2(0.9999996, 0.99999946)
+rotation = 0.24896474
+scale = Vector2(0.9999993, 0.9999989)
 rest = Transform2D(0.969168, 0.24640073, -0.24640073, 0.969168, 654.83453, 24.702747)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1179,7 +1180,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-41" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=951750328]
 position = Vector2(653.4032, 73.932495)
-rotation = 2.6466556
+rotation = 2.6466572
 rest = Transform2D(-0.8799994, 0.4749748, -0.4749748, -0.8799994, 653.4032, 73.93245)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1205,8 +1206,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-43" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=388504191]
 position = Vector2(652.9345, 138.37207)
-rotation = 2.6678014
-scale = Vector2(1, 0.9999997)
+rotation = 2.6678033
+scale = Vector2(1, 0.99999964)
 rest = Transform2D(-0.8898449, 0.4562632, -0.4562632, -0.8898449, 652.9345, 138.37215)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1314,7 +1315,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-51" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=64577383]
 position = Vector2(774.1158, 139.04358)
 rotation = 2.6442645
-scale = Vector2(0.9999997, 0.9999996)
+scale = Vector2(0.9999997, 0.9999993)
 rest = Transform2D(-0.87885946, 0.47708076, -0.47708076, -0.87885946, 774.1158, 139.04361)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1327,8 +1328,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-52" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=903293786]
 position = Vector2(713.8406, 171.76343)
-rotation = 1.5524374
-scale = Vector2(0.9999999, 0.9999999)
+rotation = 1.5524387
+scale = Vector2(0.9999996, 0.9999996)
 rest = Transform2D(0.018357871, 0.9998315, -0.9998315, 0.018357871, 713.8406, 171.76343)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1341,8 +1342,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-53" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1726911892]
 position = Vector2(774.67194, 203.48242)
-rotation = -2.660954
-scale = Vector2(0.9999998, 0.9999996)
+rotation = -2.6609523
+scale = Vector2(0.99999976, 0.99999946)
 rest = Transform2D(-0.8866991, -0.46234703, 0.46234703, -0.8866991, 774.67194, 203.48239)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1356,7 +1357,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-54" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=601545161]
 position = Vector2(714.71185, 219.21619)
 rotation = -1.5891539
-scale = Vector2(0.9999997, 0.99999976)
+scale = Vector2(0.9999992, 0.99999946)
 rest = Transform2D(-0.01835784, -0.9998315, 0.9998315, -0.01835784, 714.71185, 219.21634)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1369,7 +1370,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-55" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1175001391]
 position = Vector2(895.7382, 20.869751)
-rotation = 0.3412391
+rotation = 0.34123898
+scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(0.94233996, 0.33465716, -0.33465716, 0.94233996, 895.7382, 20.86976)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1451,7 +1453,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-61" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=1151118411]
 position = Vector2(895.6301, 204.60046)
 rotation = -2.659959
-scale = Vector2(1.0000001, 0.99999976)
+scale = Vector2(1.0000001, 0.9999997)
 rest = Transform2D(-0.8862394, -0.46322754, 0.46322754, -0.8862394, 895.6301, 204.6005)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1478,8 +1480,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-63" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=54943214]
 position = Vector2(946.987, 39.069946)
-rotation = 2.5776153
-scale = Vector2(1, 0.9999997)
+rotation = 2.5776174
+scale = Vector2(0.9999997, 0.9999995)
 rest = Transform2D(-0.8451357, 0.53455186, -0.53455186, -0.8451357, 946.98706, 39.07007)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -1520,7 +1522,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-66" type="Bone2D" parent="Platform/SoftBody2D/Skeleton2D" unique_id=596827755]
 position = Vector2(948.5425, 220.37134)
 rotation = -1.6054568
-scale = Vector2(0.9999999, 0.99999976)
+scale = Vector2(0.9999995, 0.9999994)
 rest = Transform2D(-0.034653563, -0.99939936, 0.99939936, -0.034653563, 948.5425, 220.37129)
 auto_calculate_length_and_angle = false
 length = 70.0
@@ -5426,3 +5428,6 @@ shape = SubResource("CapsuleShape2D_b58gt")
 [node name="CanvasLayer" parent="." unique_id=132188769 instance=ExtResource("4_olgtu")]
 
 [node name="VictoryLabel" parent="." unique_id=946134920 instance=ExtResource("5_q5vwb")]
+
+[node name="ItemSpawner" parent="." unique_id=839238884 instance=ExtResource("7_cg76d")]
+position = Vector2(971, 382)
